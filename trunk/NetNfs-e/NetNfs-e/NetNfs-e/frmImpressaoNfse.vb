@@ -78,7 +78,6 @@ Public Class frmImpressaoNfse
             ''Informações do Tomador de serviço
             Parametro(13) = New ReportParameter("TomadorRazaoSocial", xmlTomador.GetElementsByTagName("RazaoSocial").Item(0).InnerText)
             Parametro(14) = New ReportParameter("TomadorCpfCnpj", xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText)
-
             Parametro(15) = New ReportParameter("TomadorEndereco", xmlTomadorEndereco.GetElementsByTagName("Endereco").Item(0).InnerText & ", " & xmlTomadorEndereco.GetElementsByTagName("Numero").Item(0).InnerText & ", " & xmlTomadorEndereco.GetElementsByTagName("Complemento").Item(0).InnerText & ", " & xmlTomadorEndereco.GetElementsByTagName("Bairro").Item(0).InnerText)
             Parametro(16) = New ReportParameter("TomadorCep", xmlTomadorEndereco.GetElementsByTagName("Cep").Item(0).InnerText)
 
@@ -94,13 +93,18 @@ Public Class frmImpressaoNfse
                 Parametro(17) = New ReportParameter("TomadorEmail", "")
             End If
 
-
             If xmlTomador.GetElementsByTagName("InscricaoMunicipal").Count > 0 Then
                 Parametro(17) = New ReportParameter("TomadorInscricaoMunicipal", xmlTomador.GetElementsByTagName("InscricaoMunicipal").Item(0).InnerText)
             Else
-                Parametro(17) = New ReportParameter("TomadorEmail", "")
+                Parametro(17) = New ReportParameter("TomadorInscricaoMunicipal", "")
             End If
-            ''MATEUS PAROU NO PARAMETRO 17 DE EDIÇÃO
+            'MATEUS PAROU NO PARAMETRO 17 DE EDIÇÃO
+
+            If xmlTomador.GetElementsByTagName("InscricaoMunicipal").Count > 0 Then
+                Parametro(18) = New ReportParameter("TomadorInscricaoMunicipal", xmlTomador.GetElementsByTagName("InscricaoMunicipal").Item(0).InnerText)
+            Else
+                Parametro(18) = New ReportParameter("TomadorEmail", "")
+            End If
 
 
 
@@ -112,6 +116,7 @@ Public Class frmImpressaoNfse
 
 
             Parametro(20) = New ReportParameter("TomadorCidade", dtMunicipio.Rows(0).Item("Municipio").ToString())
+
 
 
             Relatorio.LocalReport.SetParameters(Parametro)

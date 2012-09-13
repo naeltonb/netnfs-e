@@ -58,3 +58,33 @@ C:\Users\Mateus\Desktop\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\GenerateResourc
 C:\Users\Mateus\Desktop\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Mateus\Desktop\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\RdlCompile.cache
 C:\Users\Mateus\Desktop\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\RdlCompile.compiled
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.exe
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.xml
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.pdb
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\Bd\Bd.mdf
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\Bd\Bd_log.ldf
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.exe
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.pdb
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.xml
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\WsNfs_e.dll
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\xmlNFSe.dll
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\WsNfs_e.pdb
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\xmlNFSe.pdb
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\xmlNFSe.xml
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\WsNfs_e.XmlSerializers.dll
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmCadEmpresa.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmCadParametros.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmConfigTelaConsNfse.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmConsultaNfse.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmExecutar.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmGerarXml.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmGerenciarLotes.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmImpressaoNfse.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmLocalizarNfse.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmPrincipal.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.Resources.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\RdlCompile.cache
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\RdlCompile.compiled

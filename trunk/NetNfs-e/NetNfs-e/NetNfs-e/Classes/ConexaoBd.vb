@@ -9,7 +9,7 @@ Public Class ConexaoBd
 
 
     Public Sub New()
-        strConexao = "Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mateus\Desktop\NetNfs-e\NetNfs-e\NetNfs-e\Bd\Bd.mdf;Integrated Security=True;User Instance=True"
+        strConexao = "Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\NetNfs-e\Bd\Bd.mdf;Integrated Security=True;User Instance=True"
         ConectarBd()
     End Sub
 
