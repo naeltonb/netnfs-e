@@ -28,15 +28,16 @@ Partial Class frmConsultaNfse
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.Grid = New System.Windows.Forms.DataGridView()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.btImprimir = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btEnviarEmail = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.btNovaConsulta = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.btConfigTela = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -97,32 +98,12 @@ Partial Class frmConsultaNfse
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btImprimir, Me.ToolStripSeparator1, Me.btEnviarEmail, Me.ToolStripSeparator2, Me.btNovaConsulta, Me.ToolStripSeparator4, Me.ToolStripButton1, Me.ToolStripSeparator5, Me.btConfigTela})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btImprimir, Me.ToolStripSeparator1, Me.btEnviarEmail, Me.ToolStripSeparator2, Me.btNovaConsulta, Me.ToolStripSeparator4, Me.ToolStripButton1, Me.ToolStripSeparator5, Me.ToolStripButton2, Me.btConfigTela})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.MinimumSize = New System.Drawing.Size(0, 40)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(711, 40)
+        Me.ToolStrip1.Size = New System.Drawing.Size(804, 40)
         Me.ToolStrip1.TabIndex = 0
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 40)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 40)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 40)
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 40)
         '
         'btImprimir
         '
@@ -134,6 +115,11 @@ Partial Class frmConsultaNfse
         Me.btImprimir.Size = New System.Drawing.Size(125, 37)
         Me.btImprimir.Text = "&Imprimir Nfs-e"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 40)
+        '
         'btEnviarEmail
         '
         Me.btEnviarEmail.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -143,6 +129,11 @@ Partial Class frmConsultaNfse
         Me.btEnviarEmail.Name = "btEnviarEmail"
         Me.btEnviarEmail.Size = New System.Drawing.Size(137, 37)
         Me.btEnviarEmail.Text = "&Enviar por email"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 40)
         '
         'btNovaConsulta
         '
@@ -154,6 +145,11 @@ Partial Class frmConsultaNfse
         Me.btNovaConsulta.Size = New System.Drawing.Size(127, 37)
         Me.btNovaConsulta.Text = "Nova &consulta"
         '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 40)
+        '
         'ToolStripButton1
         '
         Me.ToolStripButton1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -164,6 +160,11 @@ Partial Class frmConsultaNfse
         Me.ToolStripButton1.Size = New System.Drawing.Size(122, 37)
         Me.ToolStripButton1.Text = "&Atualizar tela"
         '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 40)
+        '
         'btConfigTela
         '
         Me.btConfigTela.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -171,8 +172,18 @@ Partial Class frmConsultaNfse
         Me.btConfigTela.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btConfigTela.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btConfigTela.Name = "btConfigTela"
-        Me.btConfigTela.Size = New System.Drawing.Size(133, 37)
-        Me.btConfigTela.Text = "Con&figurar tela"
+        Me.btConfigTela.Size = New System.Drawing.Size(93, 37)
+        Me.btConfigTela.Text = "GerarPdf"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(133, 37)
+        Me.ToolStripButton2.Text = "Con&figurar tela"
         '
         'frmConsultaNfse
         '
@@ -206,4 +217,5 @@ Partial Class frmConsultaNfse
     Friend WithEvents btNovaConsulta As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents btConfigTela As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
 End Class

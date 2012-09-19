@@ -65,6 +65,24 @@ Public Class frmConsultaNfse
     End Sub
 
     Private Sub btConfigTela_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btConfigTela.Click
+        If Grid.SelectedRows.Count <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        Else
+            'Consulta a o xml da Nfse e carrega em um arquivo xmlDocument
+            Dim Sql As String = "Select Xml from tb_Xml_Nfse where NumNota = '" & Grid.CurrentRow.Cells("NumNota").Value & "'"
+            Dim conBd As New ConexaoBd
+            Dim Dt As New DataTable
+            Dt = conBd.Consultar(Sql, "tb_Xml_Nfse")
+            Dim dr As DataRow = Dt.Rows(0)
+            Dim xmlNfse As New XmlDocument
+            xmlNfse.LoadXml(dr("Xml"))
+
+
+        End If
+
+
+
+
         Dim frm As New frmConfigTelaConsNfse
         frm.Show()
     End Sub
