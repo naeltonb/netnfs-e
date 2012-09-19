@@ -873,7 +873,7 @@
         </Style>
       </Textbox>
       <Line Name="Line6">
-        <Top>7.57325cm</Top>
+        <Top>7.50975cm</Top>
         <Left>0.02659cm</Left>
         <Height>0cm</Height>
         <Width>18.90288cm</Width>
@@ -1483,7 +1483,7 @@
         </Style>
       </Textbox>
       <Line Name="Line9">
-        <Top>12.36747cm</Top>
+        <Top>10.52598cm</Top>
         <Left>0.02659cm</Left>
         <Height>0cm</Height>
         <Width>18.90288cm</Width>
@@ -1501,7 +1501,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>DESCRIMINAÇÃO DO(S) SERVIÇO(S):</Value>
+                <Value>DISCRIMINAÇÃO DO(S) SERVIÇO(S):</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -1512,7 +1512,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>11.82589cm</Top>
+        <Top>9.95265cm</Top>
         <Left>0.05834cm</Left>
         <Height>0.50475cm</Height>
         <Width>9.80286cm</Width>
@@ -1544,9 +1544,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>12.44334cm</Top>
+        <Top>10.53835cm</Top>
         <Left>0.05834cm</Left>
-        <Height>3.02856cm</Height>
+        <Height>3.34606cm</Height>
         <Width>18.74083cm</Width>
         <ZIndex>52</ZIndex>
         <Style>
@@ -1591,392 +1591,8 @@
             <Top>0.00983cm</Top>
             <Left>0.04234cm</Left>
             <Height>0.50475cm</Height>
-            <Width>9.80286cm</Width>
+            <Width>8.71399cm</Width>
             <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntLabInscricaoMunicipal">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>INSC. MUNICIPAL:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.73927cm</Top>
-            <Left>0.03197cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>2.82555cm</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntLabCidade">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>CIDADE:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.7428cm</Top>
-            <Left>6.13869cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>1.48423cm</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntLabCep">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>CEP:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>2.31105cm</Top>
-            <Left>0.07409cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>2.78343cm</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntLabTelefone">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>TELEFONE:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.7428cm</Top>
-            <Left>11.96081cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>1.72263cm</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValInscricaoMunicipal">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioInscricaoMunicipal.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.73927cm</Top>
-            <Left>2.97041cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>2.95661cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValCidade">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioCidade.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.7428cm</Top>
-            <Left>7.69348cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>4.1121cm</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValEmail">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioEmail.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>2.31105cm</Top>
-            <Left>7.73042cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>10.98912cm</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValEndereco">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioEndereco.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.22013cm</Top>
-            <Left>2.04514cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>16.6744cm</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValTelefone">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioTelefone.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.7428cm</Top>
-            <Left>13.71872cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>4.99368cm</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValCep">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioCep.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>2.31105cm</Top>
-            <Left>2.99863cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>2.92839cm</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntLabEmail">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>E-MAIL:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>2.31105cm</Top>
-            <Left>6.13869cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>1.48423cm</Width>
-            <ZIndex>12</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntermediarioEndereco">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ENDEREÇO:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.16162cm</Top>
-            <Left>0.07056cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>1.96744cm</Width>
-            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2005,42 +1621,10 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.60955cm</Top>
-            <Left>9.83977cm</Left>
+            <Left>8.82378cm</Left>
             <Height>0.50475cm</Height>
             <Width>1.96744cm</Width>
-            <ZIndex>14</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntUfLabel">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>UF:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.60955cm</Top>
-            <Left>15.88707cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>0.84668cm</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2068,10 +1652,10 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.60955cm</Top>
-            <Left>11.89026cm</Left>
+            <Left>10.87427cm</Left>
             <Height>0.50475cm</Height>
-            <Width>3.8557cm</Width>
-            <ZIndex>16</ZIndex>
+            <Width>2.73058cm</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2104,39 +1688,8 @@
             <Top>0.60955cm</Top>
             <Left>0.06372cm</Left>
             <Height>0.50475cm</Height>
-            <Width>9.72524cm</Width>
-            <ZIndex>17</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="IntValUf2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!IntermediarioUf.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.60955cm</Top>
-            <Left>16.83958cm</Left>
-            <Height>0.50475cm</Height>
-            <Width>1.83754cm</Width>
-            <ZIndex>18</ZIndex>
+            <Width>8.65027cm</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2148,22 +1701,86 @@
             </Style>
           </Textbox>
           <Line Name="Line14">
-            <Top>2.87449cm</Top>
+            <Top>1.19175cm</Top>
             <Height>0cm</Height>
             <Width>18.90288cm</Width>
-            <ZIndex>19</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
               </Border>
             </Style>
           </Line>
+          <Textbox Name="IntLabInscricaoMunicipal3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>INSC. MUNICIPAL:</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.64455cm</Top>
+            <Left>13.73454cm</Left>
+            <Height>0.473cm</Height>
+            <Width>2.7938cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="IntValInscricaoMunicipal">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!IntermediarioInscricaoMunicipal.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.60376cm</Top>
+            <Left>16.62971cm</Left>
+            <Height>0.50475cm</Height>
+            <Width>2.08705cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <DataElementOutput>ContentsOnly</DataElementOutput>
-        <Top>7.55863cm</Top>
-        <Left>0.02659cm</Left>
-        <Height>2.90624cm</Height>
+        <Top>7.59038cm</Top>
+        <Height>1.19175cm</Height>
         <Width>18.90288cm</Width>
         <ZIndex>53</ZIndex>
         <Visibility>
@@ -2272,7 +1889,7 @@
             <Top>0.65514cm</Top>
             <Left>3.28153cm</Left>
             <Height>0.50475cm</Height>
-            <Width>3.147cm</Width>
+            <Width>6.44208cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -2383,7 +2000,7 @@
             </Style>
           </Textbox>
           <Line Name="Line18">
-            <Top>1.23611cm</Top>
+            <Top>1.14086cm</Top>
             <Left>0.00696cm</Left>
             <Height>0cm</Height>
             <Width>18.90288cm</Width>
@@ -2396,8 +2013,8 @@
           </Line>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>10.50608cm</Top>
-        <Height>1.26572cm</Height>
+        <Top>8.79159cm</Top>
+        <Height>1.15989cm</Height>
         <Width>18.9168cm</Width>
         <ZIndex>55</ZIndex>
         <Visibility>
@@ -2425,7 +2042,7 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>6.13747in</Height>
+    <Height>5.52289in</Height>
     <Style>
       <Border>
         <Style>Solid</Style>
@@ -2589,43 +2206,7 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="IntermediarioUf">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="IntermediarioEndereco">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="IntermediarioInscricaoMunicipal">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="IntermediarioCidade">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="IntermediarioTelefone">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="IntermediarioCep">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="IntermediarioEmail">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
@@ -2739,12 +2320,6 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="MunicipioUf">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="NaturezaOperacaoCodigo">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
@@ -2763,11 +2338,23 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="ValorDosServicos">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DescricaoRetencoesFederais">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
-  <Width>7.45255in</Width>
+  <Width>7.46505in</Width>
   <Page>
     <PageFooter>
-      <Height>11.16541cm</Height>
+      <Height>12.32958cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -2852,9 +2439,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>8.38947cm</Top>
+          <Top>9.56425cm</Top>
           <Left>2.42195cm</Left>
-          <Height>2.28438cm</Height>
+          <Height>2.25263cm</Height>
           <Width>6.87244cm</Width>
           <Style>
             <Border>
@@ -2870,9 +2457,9 @@
           <Source>Embedded</Source>
           <Value>pbh</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>8.35418cm</Top>
+          <Top>9.52896cm</Top>
           <Left>0.11056cm</Left>
-          <Height>2.31966cm</Height>
+          <Height>2.28791cm</Height>
           <Width>2.24083cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -2901,9 +2488,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>10.75497cm</Top>
+          <Top>11.92975cm</Top>
           <Left>0.10068cm</Left>
-          <Height>0.346cm</Height>
+          <Height>0.31425cm</Height>
           <Width>18.74789cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -3327,7 +2914,7 @@
           <Top>2.33071cm</Top>
           <Left>2.01264cm</Left>
           <Height>0.50475cm</Height>
-          <Width>4.96583cm</Width>
+          <Width>6.74369cm</Width>
           <ZIndex>17</ZIndex>
           <Style>
             <Border>
@@ -3392,7 +2979,7 @@
           <Top>2.33071cm</Top>
           <Left>10.02413cm</Left>
           <Height>0.50475cm</Height>
-          <Width>1.73942cm</Width>
+          <Width>0.76709cm</Width>
           <ZIndex>19</ZIndex>
           <Style>
             <Border>
@@ -3422,7 +3009,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>2.33071cm</Top>
-          <Left>11.86586cm</Left>
+          <Left>10.84987cm</Left>
           <Height>0.50475cm</Height>
           <Width>0.28046cm</Width>
           <ZIndex>20</ZIndex>
@@ -3454,74 +3041,10 @@
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>2.33071cm</Top>
-          <Left>12.26825cm</Left>
+          <Left>11.18876cm</Left>
           <Height>0.50475cm</Height>
-          <Width>6.52687cm</Width>
+          <Width>7.51111cm</Width>
           <ZIndex>21</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox81">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>/</Value>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>2.33071cm</Top>
-          <Left>7.05255cm</Left>
-          <Height>0.50475cm</Height>
-          <Width>0.2895cm</Width>
-          <ZIndex>22</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox82">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Parameters!MunicipioUf.Value</Value>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>2.33071cm</Top>
-          <Left>7.41261cm</Left>
-          <Height>0.50475cm</Height>
-          <Width>1.3809cm</Width>
-          <ZIndex>23</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3553,8 +3076,8 @@
           <Top>2.91576cm</Top>
           <Left>0.05428cm</Left>
           <Height>0.50475cm</Height>
-          <Width>8.72864cm</Width>
-          <ZIndex>24</ZIndex>
+          <Width>4.90277cm</Width>
+          <ZIndex>22</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3586,8 +3109,8 @@
           <Top>2.91576cm</Top>
           <Left>10.02413cm</Left>
           <Height>0.50475cm</Height>
-          <Width>8.81332cm</Width>
-          <ZIndex>25</ZIndex>
+          <Width>4.91203cm</Width>
+          <ZIndex>23</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3620,7 +3143,7 @@
           <Left>0.06487cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>26</ZIndex>
+          <ZIndex>24</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3653,7 +3176,7 @@
           <Left>0.06487cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>27</ZIndex>
+          <ZIndex>25</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3686,7 +3209,7 @@
           <Left>0.06487cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>28</ZIndex>
+          <ZIndex>26</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3715,11 +3238,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>5.2117cm</Top>
+          <Top>5.1482cm</Top>
           <Left>0.06487cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>29</ZIndex>
+          <ZIndex>27</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3751,7 +3274,7 @@
           <Left>5.06288cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.72004cm</Width>
-          <ZIndex>30</ZIndex>
+          <ZIndex>28</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3783,7 +3306,7 @@
           <Left>5.06288cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.72004cm</Width>
-          <ZIndex>31</ZIndex>
+          <ZIndex>29</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3815,7 +3338,7 @@
           <Left>5.06288cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.72004cm</Width>
-          <ZIndex>32</ZIndex>
+          <ZIndex>30</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3836,6 +3359,7 @@
                   <Value>=Parameters!ValorLiquido.Value</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -3843,11 +3367,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>5.2117cm</Top>
+          <Top>5.1482cm</Top>
           <Left>5.06288cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.72004cm</Width>
-          <ZIndex>33</ZIndex>
+          <ZIndex>31</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3880,7 +3404,7 @@
           <Left>10.02413cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>34</ZIndex>
+          <ZIndex>32</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3913,7 +3437,7 @@
           <Left>10.02413cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>35</ZIndex>
+          <ZIndex>33</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3946,7 +3470,7 @@
           <Left>10.02413cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>36</ZIndex>
+          <ZIndex>34</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -3979,7 +3503,7 @@
           <Left>10.02413cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>37</ZIndex>
+          <ZIndex>35</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4011,7 +3535,7 @@
           <Left>15.02214cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.81531cm</Width>
-          <ZIndex>38</ZIndex>
+          <ZIndex>36</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4043,7 +3567,7 @@
           <Left>15.02214cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.81531cm</Width>
-          <ZIndex>39</ZIndex>
+          <ZIndex>37</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4064,6 +3588,7 @@
                   <Value>=Parameters!ValorBaseDeCalculo.Value</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -4075,7 +3600,7 @@
           <Left>15.02214cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.81531cm</Width>
-          <ZIndex>40</ZIndex>
+          <ZIndex>38</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4107,7 +3632,7 @@
           <Left>15.02214cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.81178cm</Width>
-          <ZIndex>41</ZIndex>
+          <ZIndex>39</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4140,7 +3665,7 @@
           <Left>10.02766cm</Left>
           <Height>0.50475cm</Height>
           <Width>4.89218cm</Width>
-          <ZIndex>42</ZIndex>
+          <ZIndex>40</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4172,7 +3697,7 @@
           <Left>15.02567cm</Left>
           <Height>0.50475cm</Height>
           <Width>3.81178cm</Width>
-          <ZIndex>43</ZIndex>
+          <ZIndex>41</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4188,7 +3713,7 @@
           <Left>0.02253cm</Left>
           <Height>0cm</Height>
           <Width>18.90288cm</Width>
-          <ZIndex>44</ZIndex>
+          <ZIndex>42</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -4213,11 +3738,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>6.35557cm</Top>
+          <Top>7.53035cm</Top>
           <Left>0.08603cm</Left>
-          <Height>0.50475cm</Height>
+          <Height>0.473cm</Height>
           <Width>18.74789cm</Width>
-          <ZIndex>45</ZIndex>
+          <ZIndex>43</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4238,7 +3763,6 @@
                   <Value>=Parameters!OutrasInformacoes.Value</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -4246,11 +3770,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>7.00115cm</Top>
+          <Top>8.17593cm</Top>
           <Left>0.08603cm</Left>
-          <Height>1.17665cm</Height>
+          <Height>1.1449cm</Height>
           <Width>18.74789cm</Width>
-          <ZIndex>46</ZIndex>
+          <ZIndex>44</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -4262,17 +3786,148 @@
           </Style>
         </Textbox>
         <Line Name="Line22">
-          <Top>8.27885cm</Top>
+          <Top>9.45363cm</Top>
           <Left>0.02253cm</Left>
-          <Height>0cm</Height>
+          <Height>-0.03175cm</Height>
           <Width>18.90288cm</Width>
-          <ZIndex>47</ZIndex>
+          <ZIndex>45</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
             </Border>
           </Style>
         </Line>
+        <Textbox Name="Textbox135">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!ValorDosServicos.Value</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>2.91576cm</Top>
+          <Left>15.02407cm</Left>
+          <Height>0.50475cm</Height>
+          <Width>3.81531cm</Width>
+          <ZIndex>46</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox136">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!ValorDosServicos.Value</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>2.91576cm</Top>
+          <Left>5.05936cm</Left>
+          <Height>0.50475cm</Height>
+          <Width>3.68831cm</Width>
+          <ZIndex>47</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox137">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>RETENÇÕES FEDERAIS:</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>6.35956cm</Top>
+          <Left>0.10667cm</Left>
+          <Height>0.473cm</Height>
+          <Width>18.74789cm</Width>
+          <ZIndex>48</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox138">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!DescricaoRetencoesFederais.Value</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>6.91264cm</Top>
+          <Left>0.10667cm</Left>
+          <Height>0.54165cm</Height>
+          <Width>18.74789cm</Width>
+          <ZIndex>49</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
