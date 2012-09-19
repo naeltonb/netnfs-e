@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<EnviarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
-  <NumeroLote>11</NumeroLote>
-  <DataRecebimento>2012-08-15T03:00:51</DataRecebimento>
-  <Protocolo>AE0280542l2012U000000002</Protocolo>
-</EnviarLoteRpsResposta>
