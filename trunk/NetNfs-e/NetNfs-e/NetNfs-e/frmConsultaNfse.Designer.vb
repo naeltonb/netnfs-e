@@ -36,8 +36,8 @@ Partial Class frmConsultaNfse
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btConfigTela = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.btConfigTela = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -165,16 +165,6 @@ Partial Class frmConsultaNfse
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 40)
         '
-        'btConfigTela
-        '
-        Me.btConfigTela.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btConfigTela.Image = CType(resources.GetObject("btConfigTela.Image"), System.Drawing.Image)
-        Me.btConfigTela.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btConfigTela.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btConfigTela.Name = "btConfigTela"
-        Me.btConfigTela.Size = New System.Drawing.Size(93, 37)
-        Me.btConfigTela.Text = "GerarPdf"
-        '
         'ToolStripButton2
         '
         Me.ToolStripButton2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -184,6 +174,16 @@ Partial Class frmConsultaNfse
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Size = New System.Drawing.Size(133, 37)
         Me.ToolStripButton2.Text = "Con&figurar tela"
+        '
+        'btConfigTela
+        '
+        Me.btConfigTela.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btConfigTela.Image = CType(resources.GetObject("btConfigTela.Image"), System.Drawing.Image)
+        Me.btConfigTela.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btConfigTela.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btConfigTela.Name = "btConfigTela"
+        Me.btConfigTela.Size = New System.Drawing.Size(93, 37)
+        Me.btConfigTela.Text = "GerarPdf"
         '
         'frmConsultaNfse
         '
