@@ -1,8 +1,11 @@
 ﻿Imports Microsoft.Reporting
 Imports Microsoft.Reporting.WinForms
 Imports System.Xml
+Imports System.IO
+
 Public Class frmImpressaoNfse
 
+    Private EnviarPdfXmlEmail As String
     Private XmlNfse As XmlDocument
     Dim xmlInfNfse As XmlElement
     Dim xmlIdRps As XmlElement
@@ -16,7 +19,8 @@ Public Class frmImpressaoNfse
     Dim xmlOrgaoGerador As XmlElement
 
 
-    Public Sub New(ByVal xml As XmlDocument)
+
+    Public Sub New(ByVal xml As XmlDocument, ByVal EnviaEmail As String)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -24,6 +28,7 @@ Public Class frmImpressaoNfse
         ' Add any initialization after the InitializeComponent() call.
         XmlNfse = New XmlDocument
         XmlNfse = xml
+        EnviarPdfXmlEmail = EnviaEmail
 
     End Sub
 
@@ -286,14 +291,27 @@ Public Class frmImpressaoNfse
 
             Parametro(35) = New ReportParameter("ValorBaseDeCalculo", "R$ " & xmlValorServico.GetElementsByTagName("BaseCalculo").Item(0).InnerText)
 
-            Dim SAliquotaIss As String
-            Dim AliquotaIss As Decimal
-            SAliquotaIss = xmlValorServico.GetElementsByTagName("Aliquota").Item(0).InnerText
-            AliquotaIss = Convert.ToDecimal(SAliquotaIss)
 
-            Parametro(36) = New ReportParameter("ValorAliquota", "% " & AliquotaIss)
 
-            Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & xmlValorServico.GetElementsByTagName("ValorIss").Item(0).InnerText)
+
+
+            'SE O ISS FOR RETIDO IMPRIME OS VALORES, CASO NÃO, BUSCA A ALIQUOTA DOS PARAMETROS E IMPRIME
+            If xmlValorServico.GetElementsByTagName("Aliquota").Count > 0 Then
+                Dim SAliquotaIss As String
+                Dim AliquotaIss As Decimal
+
+                SAliquotaIss = xmlValorServico.GetElementsByTagName("Aliquota").Item(0).InnerText
+                AliquotaIss = Convert.ToDecimal(SAliquotaIss)
+
+                Parametro(36) = New ReportParameter("ValorAliquota", "% " & AliquotaIss)
+                Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & xmlValorServico.GetElementsByTagName("ValorIss").Item(0).InnerText)
+
+
+            Else
+                Parametro(36) = New ReportParameter("ValorAliquota", "% " & "0")
+                Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & "0")
+            End If
+
 
             If xmlServico.GetElementsByTagName("CodigoTributacaoMunicipio").Count > 0 Then
                 Parametro(38) = New ReportParameter("CtIssCodigo", xmlServico.GetElementsByTagName("CodigoTributacaoMunicipio").Item(0).InnerText)
@@ -334,6 +352,27 @@ Public Class frmImpressaoNfse
 
             Relatorio.LocalReport.SetParameters(Parametro)
             Me.Relatorio.RefreshReport()
+            Stop
+            If EnviarPdfXmlEmail = "S" Then
+                Dim warnings As Warning() = Nothing
+                Dim streamids As String() = Nothing
+                Dim mimeType As String = Nothing
+                Dim encoding As String = Nothing
+                Dim fileNameExtension As String = Nothing
+
+                Dim exportBytesPDF() As Byte = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+
+                Dim bytesPDF As Byte()
+                bytesPDF = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+                Dim fs As New FileStream("C:\Temp\teste.pdf", FileMode.Create)
+                fs.Write(bytesPDF, 0, bytesPDF.Length)
+                fs.Close()
+
+                Dim exportBytesXML() As Byte = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+
+                XmlNfse.Save("C:\Temp\teste.xml")
+
+            End If
 
 
         Catch ex As Exception

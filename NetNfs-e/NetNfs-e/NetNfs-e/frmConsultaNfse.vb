@@ -99,7 +99,24 @@ Public Class frmConsultaNfse
             Dim dr As DataRow = Dt.Rows(0)
             Dim xmlNfse As New XmlDocument
             xmlNfse.LoadXml(dr("Xml"))
-            Dim frm As New frmImpressaoNfse(xmlNfse)
+            Dim frm As New frmImpressaoNfse(xmlNfse, "N")
+            frm.Show()
+        End If
+    End Sub
+
+    Private Sub btEnviarEmail_Click(sender As System.Object, e As System.EventArgs) Handles btEnviarEmail.Click
+        If Grid.SelectedRows.Count <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        Else
+            'Consulta a o xml da Nfse e carrega em um arquivo xmlDocument
+            Dim Sql As String = "Select Xml from tb_Xml_Nfse where NumNota = '" & Grid.CurrentRow.Cells("NumNota").Value & "'"
+            Dim conBd As New ConexaoBd
+            Dim Dt As New DataTable
+            Dt = conBd.Consultar(Sql, "tb_Xml_Nfse")
+            Dim dr As DataRow = Dt.Rows(0)
+            Dim xmlNfse As New XmlDocument
+            xmlNfse.LoadXml(dr("Xml"))
+            Dim frm As New frmImpressaoNfse(xmlNfse, "S")
             frm.Show()
         End If
     End Sub
