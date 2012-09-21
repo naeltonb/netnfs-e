@@ -89,7 +89,6 @@ Partial Class frmConsultaNfse
         Me.Grid.DefaultCellStyle = DataGridViewCellStyle2
         Me.Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Grid.Location = New System.Drawing.Point(0, 0)
-        Me.Grid.MultiSelect = False
         Me.Grid.Name = "Grid"
         Me.Grid.ReadOnly = True
         Me.Grid.Size = New System.Drawing.Size(901, 456)
@@ -102,7 +101,7 @@ Partial Class frmConsultaNfse
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.MinimumSize = New System.Drawing.Size(0, 40)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(804, 40)
+        Me.ToolStrip1.Size = New System.Drawing.Size(840, 40)
         Me.ToolStrip1.TabIndex = 0
         '
         'btImprimir
@@ -182,8 +181,8 @@ Partial Class frmConsultaNfse
         Me.btConfigTela.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btConfigTela.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btConfigTela.Name = "btConfigTela"
-        Me.btConfigTela.Size = New System.Drawing.Size(93, 37)
-        Me.btConfigTela.Text = "GerarPdf"
+        Me.btConfigTela.Size = New System.Drawing.Size(129, 37)
+        Me.btConfigTela.Text = "Visualizar XML"
         '
         'frmConsultaNfse
         '

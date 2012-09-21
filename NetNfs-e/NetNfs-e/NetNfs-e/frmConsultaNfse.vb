@@ -76,15 +76,14 @@ Public Class frmConsultaNfse
             Dim dr As DataRow = Dt.Rows(0)
             Dim xmlNfse As New XmlDocument
             xmlNfse.LoadXml(dr("Xml"))
+            xmlNfse.Save("C:\Temp\teste.xml")
+            Dim form = New frmVisualizarXml("C:\Temp\teste.xml")
+            form.Show()
 
 
         End If
 
 
-
-
-        Dim frm As New frmConfigTelaConsNfse
-        frm.Show()
     End Sub
 
     Private Sub btImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btImprimir.Click
@@ -105,19 +104,31 @@ Public Class frmConsultaNfse
     End Sub
 
     Private Sub btEnviarEmail_Click(sender As System.Object, e As System.EventArgs) Handles btEnviarEmail.Click
+
+        Dim linhas As Integer
+        linhas = Grid.SelectedRows.Count - 1
+
         If Grid.SelectedRows.Count <= 0 Then
             MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
         Else
-            'Consulta a o xml da Nfse e carrega em um arquivo xmlDocument
-            Dim Sql As String = "Select Xml from tb_Xml_Nfse where NumNota = '" & Grid.CurrentRow.Cells("NumNota").Value & "'"
-            Dim conBd As New ConexaoBd
-            Dim Dt As New DataTable
-            Dt = conBd.Consultar(Sql, "tb_Xml_Nfse")
-            Dim dr As DataRow = Dt.Rows(0)
-            Dim xmlNfse As New XmlDocument
-            xmlNfse.LoadXml(dr("Xml"))
-            Dim frm As New frmImpressaoNfse(xmlNfse, "S")
-            frm.Show()
+            For index = 0 To linhas
+                'Consulta a o xml da Nfse e carrega em um arquivo xmlDocument
+                Dim Sql As String = "Select Xml from tb_Xml_Nfse where NumNota = '" & Grid.SelectedRows(index).Cells("NumNota").Value & "'"
+                Dim conBd As New ConexaoBd
+                Dim Dt As New DataTable
+                Dt = conBd.Consultar(Sql, "tb_Xml_Nfse")
+                Dim dr As DataRow = Dt.Rows(0)
+                Dim xmlNfse As New XmlDocument
+                xmlNfse.LoadXml(dr("Xml"))
+                Dim frm As New frmImpressaoNfse(xmlNfse, "S")
+                frm.WindowState = FormWindowState.Minimized
+                frm.Show()
+                frm.Close()
+            Next
         End If
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As System.Object, e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
     End Sub
 End Class
