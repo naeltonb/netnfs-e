@@ -2031,9 +2031,9 @@
         <Value>Logo</Value>
         <Sizing>Fit</Sizing>
         <Top>1.94592cm</Top>
-        <Left>0.92854cm</Left>
+        <Left>0.11056cm</Left>
         <Height>2.66402cm</Height>
-        <Width>3.00446cm</Width>
+        <Width>4.84649cm</Width>
         <ZIndex>56</ZIndex>
         <Style>
           <Border>
@@ -2458,9 +2458,9 @@
           <Value>pbh</Value>
           <Sizing>FitProportional</Sizing>
           <Top>9.52896cm</Top>
-          <Left>0.11056cm</Left>
+          <Left>0.33281cm</Left>
           <Height>2.28791cm</Height>
-          <Width>2.24083cm</Width>
+          <Width>1.92581cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

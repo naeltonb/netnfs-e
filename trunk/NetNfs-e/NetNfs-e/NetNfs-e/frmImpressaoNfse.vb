@@ -2,6 +2,7 @@
 Imports Microsoft.Reporting.WinForms
 Imports System.Xml
 Imports System.IO
+Imports System.Net.Mail
 
 Public Class frmImpressaoNfse
 
@@ -92,7 +93,6 @@ Public Class frmImpressaoNfse
             Parametro(14) = New ReportParameter("TomadorCpfCnpj", xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText)
 
             'INFORMAÇÕES DO TOMADOR
-
             Dim Endereco, Numero, Complemento, Bairro As String
 
             If xmlTomador.GetElementsByTagName("Endereco").Count > 0 Then
@@ -291,28 +291,22 @@ Public Class frmImpressaoNfse
 
             Parametro(35) = New ReportParameter("ValorBaseDeCalculo", "R$ " & xmlValorServico.GetElementsByTagName("BaseCalculo").Item(0).InnerText)
 
-
-
-
-
             'SE O ISS FOR RETIDO IMPRIME OS VALORES, CASO NÃO, BUSCA A ALIQUOTA DOS PARAMETROS E IMPRIME
             If xmlValorServico.GetElementsByTagName("Aliquota").Count > 0 Then
                 Dim SAliquotaIss As String
                 Dim AliquotaIss As Decimal
-
                 SAliquotaIss = xmlValorServico.GetElementsByTagName("Aliquota").Item(0).InnerText
                 AliquotaIss = Convert.ToDecimal(SAliquotaIss)
-
                 Parametro(36) = New ReportParameter("ValorAliquota", "% " & AliquotaIss)
-                Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & xmlValorServico.GetElementsByTagName("ValorIss").Item(0).InnerText)
-
-
             Else
                 Parametro(36) = New ReportParameter("ValorAliquota", "% " & "0")
-                Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & "0")
             End If
 
-
+            If xmlValorServico.GetElementsByTagName("ValorIss").Count > 0 Then
+                Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & xmlValorServico.GetElementsByTagName("ValorIss").Item(0).InnerText)
+            Else
+                Parametro(37) = New ReportParameter("ValorDoIss", "R$ " & "0")
+            End If
             If xmlServico.GetElementsByTagName("CodigoTributacaoMunicipio").Count > 0 Then
                 Parametro(38) = New ReportParameter("CtIssCodigo", xmlServico.GetElementsByTagName("CodigoTributacaoMunicipio").Item(0).InnerText)
                 Dim SqlConsultarTributacaoMunicipio As String = "Select * from tb_ItemListaServico where CodigoServico = '" & xmlServico.GetElementsByTagName("CodigoTributacaoMunicipio").Item(0).InnerText & "'"
@@ -326,7 +320,7 @@ Public Class frmImpressaoNfse
 
             Parametro(40) = New ReportParameter("SubItemCodigo", xmlServico.GetElementsByTagName("ItemListaServico").Item(0).InnerText)
 
-            Dim SqlConsultarItemListaServico As String = "Select * from tb_ItemListaServico where CodigoServico = '" & xmlServico.GetElementsByTagName("CodigoTributacaoMunicipio").Item(0).InnerText & "'"
+            Dim SqlConsultarItemListaServico As String = "Select * from tb_ItemListaServico where CodigoServico = '" & xmlServico.GetElementsByTagName("ItemListaServico").Item(0).InnerText & "'"
             Dim dtListstaServico As DataTable = conBd.Consultar(SqlConsultarItemListaServico, "tb_ItemListaServico")
             Parametro(41) = New ReportParameter("SubItemDescricao", dtListstaServico.Rows(0).Item("DescricaoServico").ToString())
 
@@ -349,28 +343,61 @@ Public Class frmImpressaoNfse
             'DESCRICAO DAS RETENCOES FEDERAIS
             Parametro(47) = New ReportParameter("DescricaoRetencoesFederais", "PIS: R$ " & pis & " - COFINS: R$ " & cofins & " - CSLL: R$ " & csll & " - IRRF: R$ " & irrf)
 
-
             Relatorio.LocalReport.SetParameters(Parametro)
             Me.Relatorio.RefreshReport()
             Stop
             If EnviarPdfXmlEmail = "S" Then
-                Dim warnings As Warning() = Nothing
-                Dim streamids As String() = Nothing
-                Dim mimeType As String = Nothing
-                Dim encoding As String = Nothing
-                Dim fileNameExtension As String = Nothing
+                Try
+                    Dim numeroNfse As String
+                    numeroNfse = XmlNfse.GetElementsByTagName("Numero").Item(0).InnerText
 
-                Dim exportBytesPDF() As Byte = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+                    Dim SqlConsultarCaminho, CaminhoParametros, CaminhoArquivoPDF, CaminhoArquivoXML As String
+                    SqlConsultarCaminho = "Select DiretorioLoteRps from tb_Parametros"
+                    Dim dtCaminho As DataTable = conBd.Consultar(SqlConsultarCaminho, "tb_Parametros")
+                    CaminhoParametros = dtCaminho.Rows(0).Item("DiretorioLoteRps").ToString() & "\Temp\"
 
-                Dim bytesPDF As Byte()
-                bytesPDF = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
-                Dim fs As New FileStream("C:\Temp\teste.pdf", FileMode.Create)
-                fs.Write(bytesPDF, 0, bytesPDF.Length)
-                fs.Close()
+                    CaminhoArquivoPDF = CaminhoParametros & "NFSE-" & numeroNfse & ".pdf"
+                    CaminhoArquivoXML = CaminhoParametros & "NFSE-" & numeroNfse & ".xml"
 
-                Dim exportBytesXML() As Byte = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+                    Dim warnings As Warning() = Nothing
+                    Dim streamids As String() = Nothing
+                    Dim mimeType As String = Nothing
+                    Dim encoding As String = Nothing
+                    Dim fileNameExtension As String = Nothing
 
-                XmlNfse.Save("C:\Temp\teste.xml")
+                    Dim exportBytesPDF() As Byte = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+
+                    Dim bytesPDF As Byte()
+                    bytesPDF = Relatorio.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streamids, warnings)
+                    Dim fs As New FileStream(CaminhoArquivoPDF, FileMode.Create)
+                    fs.Write(bytesPDF, 0, bytesPDF.Length)
+                    fs.Close()
+
+                    XmlNfse.Save(CaminhoArquivoXML)
+
+                    'create the mail message
+                    Dim mail As New MailMessage()
+
+                    'set the addresses
+                    mail.From = New MailAddress("Mateus Luis <mateus@netsystemas.com.br>")
+                    mail.To.Add("mateus@rgainfo.com")
+
+                    'set the content
+                    mail.Subject = "NOTAS FISCAIS DE SERVIÇO: " & numeroNfse
+                    mail.Body = "SEGUE ARQUIVOS REFERENTE A NOTA FISCAL NUMERO: " & numeroNfse
+
+                    'to add additional attachments, simply call .Add(...) again
+                    mail.Attachments.Add(New Attachment(CaminhoArquivoPDF))
+                    mail.Attachments.Add(New Attachment(CaminhoArquivoXML))
+
+                    'send the message
+                    Dim smtp As New SmtpClient("mail.netsystemas.com.br", 25)
+                    smtp.Send(mail)
+
+                Catch exSend As Exception
+                    MsgBox(exSend.Message)
+                End Try
+
 
             End If
 
