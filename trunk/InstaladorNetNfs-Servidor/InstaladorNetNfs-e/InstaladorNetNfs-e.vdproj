@@ -876,7 +876,7 @@
             "SourcePath" = "8:Microsoft.ReportViewer.DataVisualization.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_CAE87E6411D84D7E900B0A46A4C0A328"
+            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -907,7 +907,7 @@
             "SourcePath" = "8:Microsoft.ReportViewer.WinForms.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_CAE87E6411D84D7E900B0A46A4C0A328"
+            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -978,7 +978,7 @@
             "SourcePath" = "8:Microsoft.ReportViewer.ProcessingObjectModel.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_CAE87E6411D84D7E900B0A46A4C0A328"
+            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1109,7 +1109,7 @@
             "SourcePath" = "8:Microsoft.ReportViewer.Common.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_CAE87E6411D84D7E900B0A46A4C0A328"
+            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1371,6 +1371,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5A3615EFCD8340C7AB103995B7468EC6"
+                    {
+                    "Name" = "8:Temp"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_1502BE4EC8F240C4A2B69CE49232EA20"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_724953050F214FC5AB297A11635F69B3"
                     {
                     "Name" = "8:BD"
@@ -1395,7 +1406,7 @@
                     }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_E79FFEFB1429476D83407F92F0908C1B"
                     {
-                    "Name" = "8:schemas"
+                    "Name" = "8:Schemas"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -1446,20 +1457,9 @@
                     "Property" = "8:_A429BCE6EC8641DA866C50DEF9749FAA"
                         "Folders"
                         {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_0DCD3E22B639437E96DC21DAB959B463"
-                            {
-                            "Name" = "8:Temp"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_1502BE4EC8F240C4A2B69CE49232EA20"
-                                "Folders"
-                                {
-                                }
-                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_54715E5ED54B4F58BCA21AE3E0BC59FF"
                             {
-                            "Name" = "8:Lote"
+                            "Name" = "8:Lote_Rps"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
@@ -1522,6 +1522,22 @@
         }
         "Locator"
         {
+            "{CF66B7F7-B7DA-4B08-A67A-233430638C9C}:_19B5FF513DC54AD8A8935CF62C3B281A"
+            {
+            "Name" = "8:Search for RegistryEntry2"
+            "Root" = "2:1"
+            "RegKey" = "8:SYSTEM\\CurrentControlSet\\Services\\W3SVC\\Parameters"
+            "Value" = "8:MinorVersion"
+            "Property" = "8:REGISTRYVALUE2"
+            }
+            "{CF66B7F7-B7DA-4B08-A67A-233430638C9C}:_6474B9F8CC3C4604B788685C2363642E"
+            {
+            "Name" = "8:Search for RegistryEntry1"
+            "Root" = "2:1"
+            "RegKey" = "8:SYSTEM\\CurrentControlSet\\Services\\W3SVC\\Parameters"
+            "Value" = "8:MajorVersion"
+            "Property" = "8:REGISTRYVALUE1"
+            }
         }
         "MsiBootstrapper"
         {
@@ -1533,7 +1549,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NetNfs-e - Gerênciador de Notas Fiscais Eletrônicas de Serviços"
         "ProductCode" = "8:{F1347382-A879-433B-885D-4D2C1B15FBE1}"
-        "PackageCode" = "8:{A3C111D6-9241-4791-91B3-CDB5A6F9CE8B}"
+        "PackageCode" = "8:{A610C5F6-3F08-473D-9119-87CDDDDEBED8}"
         "UpgradeCode" = "8:{BF622B63-064F-4B70-9CF8-A2B4CFAB7310}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1916,7 +1932,7 @@
                     }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_7CA06B1A475940C998F0187FA465B820"
                     {
-                    "Sequence" = "3:200"
+                    "Sequence" = "3:500"
                     "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -1951,7 +1967,7 @@
                     }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_C7B7741848C04E5CB2B88B6C1FDDF215"
                     {
-                    "Sequence" = "3:300"
+                    "Sequence" = "3:600"
                     "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
