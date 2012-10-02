@@ -45,6 +45,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_13EDAAC21862413AB75F9ECCA1C60069"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1B993ED348797F22CC6F07B700A27573"
+        "OwnerKey" = "8:_E036F228C9A0453CB141942EE1407E9A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_239875AC79D94D0A92762CD92868E3F8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,13 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_3919C5846BC5C2274AB98606EE815629"
-        "OwnerKey" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E036F228C9A0453CB141942EE1407E9A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,7 +154,7 @@
         "Entry"
         {
         "MsmKey" = "8:_A47372DCACD442B07FA7F2F3480F48C3"
-        "OwnerKey" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
+        "OwnerKey" = "8:_E036F228C9A0453CB141942EE1407E9A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -189,7 +195,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CBDE7E4E63C7477CAC1705E788E95704"
+        "MsmKey" = "8:_CA359425EF434622B75080E3162410F2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -220,7 +226,13 @@
         "Entry"
         {
         "MsmKey" = "8:_D9EEB9539A98B2930C37A47A50A8ADDC"
-        "OwnerKey" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
+        "OwnerKey" = "8:_E036F228C9A0453CB141942EE1407E9A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E036F228C9A0453CB141942EE1407E9A"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -244,12 +256,6 @@
         "Entry"
         {
         "MsmKey" = "8:_F3A61F5C15CC4DCD8264DD5588480397"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F3BA2E5EE75A467591F64CB8B44C6F9C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -280,6 +286,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E036F228C9A0453CB141942EE1407E9A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_CED5A4B25B61739F9EFBE8C2B2BA1DEA"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -298,12 +310,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D9EEB9539A98B2930C37A47A50A8ADDC"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -311,6 +317,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3919C5846BC5C2274AB98606EE815629"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1B993ED348797F22CC6F07B700A27573"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -518,6 +530,57 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_13EDAAC21862413AB75F9ECCA1C60069"
+            {
+            "SourcePath" = "8:..\\BD\\Bd.mdf"
+            "TargetName" = "8:Bd.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_724953050F214FC5AB297A11635F69B3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1B993ED348797F22CC6F07B700A27573"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_1B993ED348797F22CC6F07B700A27573"
+                    {
+                    "Name" = "8:Microsoft.VisualBasic.PowerPacks.Vs.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.VisualBasic.PowerPacks.Vs.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_239875AC79D94D0A92762CD92868E3F8"
             {
             "SourcePath" = "8:..\\..\\NetNfs-e\\NetNfs-e\\NetNfs-e\\bin\\Debug\\Schemas\\Ribeirao_das_Neves\\servico_consultar_situacao_lote_rps_envio_v03.xsd"
@@ -567,37 +630,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3CFF643C81F44E7B8A8CA8E955CB8946"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:NetNfs-e, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_3CFF643C81F44E7B8A8CA8E955CB8946"
-                    {
-                    "Name" = "8:NetNfs-e.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\NetNfs-e\\NetNfs-e\\NetNfs-e\\bin\\Debug\\NetNfs-e.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_425B1A7B0B6340EDAE96B06C9D3716F5"
@@ -1053,10 +1085,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CBDE7E4E63C7477CAC1705E788E95704"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA359425EF434622B75080E3162410F2"
             {
-            "SourcePath" = "8:..\\..\\NetNfs-e\\NetNfs-e\\NetNfs-e\\Bd\\Bd.mdf"
-            "TargetName" = "8:Bd.mdf"
+            "SourcePath" = "8:..\\BD\\Bd_log.LDF"
+            "TargetName" = "8:Bd_log.LDF"
             "Tag" = "8:"
             "Folder" = "8:_724953050F214FC5AB297A11635F69B3"
             "Condition" = "8:"
@@ -1195,6 +1227,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E036F228C9A0453CB141942EE1407E9A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:NetNfs-e, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_E036F228C9A0453CB141942EE1407E9A"
+                    {
+                    "Name" = "8:NetNfs-e.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\NetNfs-e\\NetNfs-e\\NetNfs-e\\bin\\Debug\\NetNfs-e.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E3BA3A3CFEF5423D83F9682DAA72D3F0"
             {
             "SourcePath" = "8:..\\..\\NetNfs-e\\NetNfs-e\\NetNfs-e\\bin\\Debug\\Schemas\\Contagem\\servico_cancelar_nfse_envio.xsd"
@@ -1261,26 +1324,6 @@
             "TargetName" = "8:servico_cancelar_nfse_envio_v03.xsd"
             "Tag" = "8:"
             "Folder" = "8:_DEB691B11E254F6FB97C73DA58F7854D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F3BA2E5EE75A467591F64CB8B44C6F9C"
-            {
-            "SourcePath" = "8:..\\..\\NetNfs-e\\NetNfs-e\\NetNfs-e\\Bd\\Bd_log.LDF"
-            "TargetName" = "8:Bd_log.LDF"
-            "Tag" = "8:"
-            "Folder" = "8:_724953050F214FC5AB297A11635F69B3"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1389,17 +1432,6 @@
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_B693C20F34714526B16E52372DEEF3C9"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_CAE87E6411D84D7E900B0A46A4C0A328"
-                    {
-                    "Name" = "8:DLL"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_E235C08EF3994C3891B16DA0444C5ECB"
                         "Folders"
                         {
                         }
@@ -1549,7 +1581,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NetNfs-e - Gerênciador de Notas Fiscais Eletrônicas de Serviços"
         "ProductCode" = "8:{F1347382-A879-433B-885D-4D2C1B15FBE1}"
-        "PackageCode" = "8:{A610C5F6-3F08-473D-9119-87CDDDDEBED8}"
+        "PackageCode" = "8:{F5343682-C540-43BC-8D9A-EED6A5EC37AB}"
         "UpgradeCode" = "8:{BF622B63-064F-4B70-9CF8-A2B4CFAB7310}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1677,7 +1709,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
+            "Target" = "8:"
             "Folder" = "8:_7018F1CB54164FA9BC92611BA423EB3B"
             "WorkingFolder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
             "Icon" = "8:"
@@ -1691,7 +1723,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_3CFF643C81F44E7B8A8CA8E955CB8946"
+            "Target" = "8:"
             "Folder" = "8:_38F8DDF6270B4810AEA99D9858D6C760"
             "WorkingFolder" = "8:_699D0794ADBB4D2394643EE0DD9F4AD0"
             "Icon" = "8:"
