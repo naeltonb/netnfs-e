@@ -1,0 +1,10 @@
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\bin\Debug\AutoNetNfs-e.exe
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\bin\Debug\AutoNetNfs-e.pdb
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\bin\Debug\AutoNetNfs-e.xml
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\AutoNetNfs_e.Resources.resources
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\AutoNetNfs-e.exe
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\AutoNetNfs-e.xml
+D:\Google Drive\NETSYSTEMAS\AutoNetNfs-e\obj\x86\Debug\AutoNetNfs-e.pdb
