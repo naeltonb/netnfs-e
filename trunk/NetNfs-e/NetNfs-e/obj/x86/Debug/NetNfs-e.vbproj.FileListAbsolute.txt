@@ -65,3 +65,7 @@ D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.exe.config
 D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.exe
 D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.xml
 D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.pdb
+C:\Users\Josimar\Google Drive\Projetos\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.exe.config
+C:\Users\Josimar\Google Drive\Projetos\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.exe
+C:\Users\Josimar\Google Drive\Projetos\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.xml
+C:\Users\Josimar\Google Drive\Projetos\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.pdb
