@@ -12,7 +12,9 @@ Public Class ConexaoBd
 
 #Region "Construtor"
     Public Sub New()
-        strConexao = "Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Josimar\Projetos\NFS-E\NetNfs-e\NetNfs-e\NetNfs-e\Bd\Bd.mdf;Integrated Security=True;User Instance=True"
+        Dim configurationAppSettings As System.Configuration.AppSettingsReader = New System.Configuration.AppSettingsReader()
+        strConexao = configurationAppSettings.GetValue("ConexaoBanco", GetType(System.String))
+        'strConexao = "Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Josimar\Projetos\NFS-E\NetNfs-e\NetNfs-e\NetNfs-e\Bd\Bd.mdf;Integrated Security=True;User Instance=True"
         ConectarBd()
     End Sub
 #End Region
