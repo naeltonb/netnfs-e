@@ -61,3 +61,7 @@ C:\Users\Josimar\Projetos\NFS-E\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_
 C:\Users\Josimar\Projetos\NFS-E\NetNfs-e\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.exe.config
 C:\Users\Josimar\Projetos\NFS-E\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmVisualizarXml.resources
 C:\Users\Josimar\Projetos\NFS-E\NetNfs-e\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs_e.frmTrocaSenha.resources
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.exe.config
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.exe
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.xml
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.pdb
