@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DE94AE9-A74F-4D50-BC9A-31B8675BBC31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>NetNfs_e.My.MyApplication</StartupObject>
+    <RootNamespace>NetNfs_e</RootNamespace>
+    <AssemblyName>NetNfs-e</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NetNfs-e.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NetNfs-e.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WsNfs_e, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Arquivos\WsNfs_e.dll</HintPath>
+    </Reference>
+    <Reference Include="xmlNFSe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Arquivos\xmlNFSe.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CertificadoDigital.vb" />
+    <Compile Include="Classes\ConexaoBd.vb" />
+    <Compile Include="Classes\Funcoes.vb" />
+    <Compile Include="Classes\ServicosWs.vb" />
+    <Compile Include="Classes\WsUrls.vb" />
+    <Compile Include="Classes\ConverteAbrasf.vb" />
+    <Compile Include="Classes\ClsCrypto.vb" />
+    <Compile Include="Classes\EnviarEmailCliente.vb" />
+    <Compile Include="frmCadEmpresa.Designer.vb">
+      <DependentUpon>frmCadEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadParametros.Designer.vb">
+      <DependentUpon>frmCadParametros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadParametros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadUsuarios.Designer.vb">
+      <DependentUpon>frmCadUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigTelaConsNfse.Designer.vb">
+      <DependentUpon>frmConfigTelaConsNfse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigTelaConsNfse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaNfse.Designer.vb">
+      <DependentUpon>frmConsultaNfse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaNfse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExecutar.Designer.vb">
+      <DependentUpon>frmExecutar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExecutar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerenciarLotes.Designer.vb">
+      <DependentUpon>frmGerenciarLotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerenciarLotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpressaoNfse.Designer.vb">
+      <DependentUpon>frmImpressaoNfse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImpressaoNfse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalizarNfse.Designer.vb">
+      <DependentUpon>frmLocalizarNfse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocalizarNfse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobreSistema.Designer.vb">
+      <DependentUpon>frmSobreSistema.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobreSistema.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrocaSenha.Designer.vb">
+      <DependentUpon>frmTrocaSenha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrocaSenha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarXml.Designer.vb">
+      <DependentUpon>frmVisualizarXml.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarXml.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmCadEmpresa.resx">
+      <DependentUpon>frmCadEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadParametros.resx">
+      <DependentUpon>frmCadParametros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadUsuarios.resx">
+      <DependentUpon>frmCadUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigTelaConsNfse.resx">
+      <DependentUpon>frmConfigTelaConsNfse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaNfse.resx">
+      <DependentUpon>frmConsultaNfse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExecutar.resx">
+      <DependentUpon>frmExecutar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerenciarLotes.resx">
+      <DependentUpon>frmGerenciarLotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImpressaoNfse.resx">
+      <DependentUpon>frmImpressaoNfse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalizarNfse.resx">
+      <DependentUpon>frmLocalizarNfse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobreSistema.resx">
+      <DependentUpon>frmSobreSistema.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrocaSenha.resx">
+      <DependentUpon>frmTrocaSenha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarXml.resx">
+      <DependentUpon>frmVisualizarXml.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\repNfse.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Bd\Bd.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Bd\Bd_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Bd.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\kservices.png" />
+    <None Include="Resources\FUNDO DE TELA.jpg" />
+    <None Include="Resources\FUNDO DE TELA.png" />
+    <None Include="Imagens\importar.png" />
+    <None Include="Imagens\kcmdf.png" />
+    <None Include="Imagens\atualizar.png" />
+    <None Include="Imagens\error.png" />
+    <None Include="Imagens\kget.png" />
+    <None Include="Imagens\yast_restore.png" />
+    <None Include="Imagens\yast_HD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
