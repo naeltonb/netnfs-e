@@ -41,6 +41,9 @@ Public Class frmImpressaoNfse
         'Definindo ZOOM de 150% como padrão
         Relatorio.ZoomMode = ZoomMode.PageWidth
 
+        'Habilitando imagens externas no relatório
+        Relatorio.LocalReport.EnableExternalImages = True
+
         'vincula os parâmentos no relatório
         VincularParametros()
 
@@ -98,7 +101,41 @@ Public Class frmImpressaoNfse
 
             'Informações do Tomador de serviço
             Parametro(13) = New ReportParameter("TomadorRazaoSocial", xmlTomador.GetElementsByTagName("RazaoSocial").Item(0).InnerText)
-            Parametro(14) = New ReportParameter("TomadorCpfCnpj", xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText)
+
+            ''Formata CPF e CNPJ
+            Dim cpfCnpjTomador, NovoCpfCnpjTomador As String
+
+            If xmlTomador.GetElementsByTagName("Cnpj").Count > 0 Then
+                cpfCnpjTomador = xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText
+                cpfCnpjTomador = cpfCnpjTomador.Replace(".", "")
+                cpfCnpjTomador = cpfCnpjTomador.Replace("/", "")
+                cpfCnpjTomador = cpfCnpjTomador.Replace("-", "")
+                NovoCpfCnpjTomador = cpfCnpjTomador.Substring(0, 2)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "."
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(2, 3)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "."
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(5, 3)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "/"
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(8, 4)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "-"
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(12)
+
+            Else
+                cpfCnpjTomador = xmlTomador.GetElementsByTagName("Cpf").Item(0).InnerText
+                cpfCnpjTomador = cpfCnpjTomador.Replace(".", "")
+                cpfCnpjTomador = cpfCnpjTomador.Replace("-", "")
+                NovoCpfCnpjTomador = cpfCnpjTomador.Substring(0, 3)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "."
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(3, 3)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "."
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(6, 3)
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + "-"
+                NovoCpfCnpjTomador = NovoCpfCnpjTomador + cpfCnpjTomador.Substring(9)
+
+            End If
+
+            Parametro(14) = New ReportParameter("TomadorCpfCnpj", NovoCpfCnpjTomador)
+
 
             'INFORMAÇÕES DO TOMADOR
             Dim Endereco, Numero, Complemento As String
@@ -183,13 +220,43 @@ Public Class frmImpressaoNfse
                     Parametro(23) = New ReportParameter("IntermediarioRazaoSocial", "")
                 End If
 
-                If xmlIntermediario.GetElementsByTagName("Cpf").Count > 0 Then
-                    Parametro(24) = New ReportParameter("IntermediarioCpfCnpj", xmlIntermediario.GetElementsByTagName("Cpf").Item(0).InnerText)
-                ElseIf xmlIntermediario.GetElementsByTagName("Cnpj").Count > 0 Then
-                    Parametro(24) = New ReportParameter("IntermediarioCpfCnpj", xmlIntermediario.GetElementsByTagName("Cnpj").Item(0).InnerText)
+
+
+                ''Formata CPF e CNPJ
+                Dim cpfCnpjIntermediario, NovoCpfCnpjIntermediario As String
+
+                If xmlTomador.GetElementsByTagName("Cnpj").Count > 0 Then
+                    cpfCnpjIntermediario = xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText
+                    cpfCnpjIntermediario = cpfCnpjIntermediario.Replace(".", "")
+                    cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("/", "")
+                    cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("-", "")
+                    NovoCpfCnpjIntermediario = cpfCnpjIntermediario.Substring(0, 2)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "."
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(2, 3)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "."
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(5, 3)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "/"
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(8, 4)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "-"
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(12)
+
+                ElseIf xmlIntermediario.GetElementsByTagName("Cpf").Count > 0 Then
+                    cpfCnpjIntermediario = xmlTomador.GetElementsByTagName("Cpf").Item(0).InnerText
+                    cpfCnpjIntermediario = cpfCnpjIntermediario.Replace(".", "")
+                    cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("-", "")
+                    NovoCpfCnpjIntermediario = cpfCnpjIntermediario.Substring(0, 3)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "."
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(3, 3)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "."
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(6, 3)
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + "-"
+                    NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(9)
                 Else
-                    Parametro(24) = New ReportParameter("IntermediarioCpfCnpj", "")
+                    NovoCpfCnpjIntermediario = ""
                 End If
+
+                Parametro(24) = New ReportParameter("IntermediarioCpfCnpj", NovoCpfCnpjIntermediario)
+
 
                 If xmlIntermediario.GetElementsByTagName("InscricaoMunicipal").Count > 0 Then
                     Parametro(25) = New ReportParameter("IntermediarioInscricaoMunicipal", xmlIntermediario.GetElementsByTagName("InscricaoMunicipal").Item(0).InnerText)
@@ -345,7 +412,6 @@ Public Class frmImpressaoNfse
             'DESCRICAO DAS RETENCOES FEDERAIS
             Parametro(47) = New ReportParameter("DescricaoRetencoesFederais", "PIS: R$ " & pis & " - COFINS: R$ " & cofins & " - CSLL: R$ " & csll & " - IRRF: R$ " & irrf)
 
-            Relatorio.LocalReport.EnableExternalImages = True
 
             Dim diretorio1 As New DirectoryInfo(My.Application.Info.DirectoryPath & "\LogoPrestador")
             Dim arquivos1() As FileInfo = diretorio1.GetFiles
