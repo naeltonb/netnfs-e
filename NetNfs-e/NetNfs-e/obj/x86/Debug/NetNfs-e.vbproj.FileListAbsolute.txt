@@ -96,3 +96,5 @@ D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\GenerateResource.rea
 D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\RdlCompile.cache
 D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\RdlCompile.compiled
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\bin\Debug\NetNfs-e.pdb
+D:\Google Drive\NETSYSTEMAS\NetNfs-e\NetNfs-e\obj\x86\Debug\NetNfs-e.pdb
