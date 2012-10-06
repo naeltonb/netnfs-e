@@ -221,11 +221,11 @@ Public Class frmImpressaoNfse
                 End If
 
 
-
+                Stop
                 ''Formata CPF e CNPJ
                 Dim cpfCnpjIntermediario, NovoCpfCnpjIntermediario As String
 
-                If xmlTomador.GetElementsByTagName("Cnpj").Count > 0 Then
+                If xmlIntermediario.GetElementsByTagName("Cnpj").Count > 0 Then
                     cpfCnpjIntermediario = xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace(".", "")
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("/", "")
@@ -241,7 +241,7 @@ Public Class frmImpressaoNfse
                     NovoCpfCnpjIntermediario = NovoCpfCnpjIntermediario + cpfCnpjIntermediario.Substring(12)
 
                 ElseIf xmlIntermediario.GetElementsByTagName("Cpf").Count > 0 Then
-                    cpfCnpjIntermediario = xmlTomador.GetElementsByTagName("Cpf").Item(0).InnerText
+                    cpfCnpjIntermediario = xmlIntermediario.GetElementsByTagName("Cpf").Item(0).InnerText
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace(".", "")
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("-", "")
                     NovoCpfCnpjIntermediario = cpfCnpjIntermediario.Substring(0, 3)
