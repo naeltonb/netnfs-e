@@ -244,6 +244,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSobreSistema.resx">
       <DependentUpon>frmSobreSistema.vb</DependentUpon>
