@@ -14,7 +14,26 @@ Public Class frmGerenciarLotes
     Private _infLote As infLote
     Private QutArquivosSel As Integer = 0
     Private BytAssinandoLote As Byte = 0 'Serve para identificar quando está ocorrendo uma assinatura de arquivo
+    Private StrDiretorio As String
+#End Region
 
+#Region "Construtores"
+    Public Sub New(ByVal UrlDiretorio As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        StrDiretorio = UrlDiretorio
+
+    End Sub
+
+    Public Sub New()
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        StrDiretorio = strDiretorioNFSe
+    End Sub
 #End Region
 
 #Region "Estruturas"
@@ -30,7 +49,6 @@ Public Class frmGerenciarLotes
 #End Region
 
 #Region "Métodos públicos"
-
 
     Public Sub CarregarLista(ByVal _diretorio As String)
         Dim diretorio As New DirectoryInfo(_diretorio)
@@ -138,25 +156,6 @@ Public Class frmGerenciarLotes
 
 #Region "Métodos privados"
 
-    Private Sub frmGerenciarLotes_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
-        CentralizarForm(Me)
-    End Sub
-
-
-    Private Sub frmGerenciarLotes_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
-        If e.KeyCode = 27 Then
-            Me.Close()
-        End If
-    End Sub
-
-    Private Sub frmGerenciarLotes_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        'Define o tamanho do formulário
-        Me.Height = frmPrincipal.Height - 170
-        Me.Width = frmPrincipal.Width - 60
-
-        CarregarLista(strDiretorioNFSe)
-    End Sub
-
     Private Sub informacoesLote(ByVal numLote As Integer)
 
         Dim conBd As New ConexaoBd
@@ -201,173 +200,6 @@ Public Class frmGerenciarLotes
             _infLote.Mensagem = "Arquivo não foi enviado para prefeitura"
         End If
     End Sub
-
-
-
-    Private Sub btArquivar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btArquivar.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf MsgBox("Tem certeza que deseja arquivar os lotes selecionados?" & Chr(13) & "Comando válido somente para status Processado com Sucesso ou Notas Importadas", vbQuestion + vbYesNo + vbDefaultButton2, "Confirmação") = vbYes Then
-            ExecutarComandoLote("Arquivar")
-        End If
-    End Sub
-
-    Private Sub DeletarLote(ByVal item As ListViewItem)
-
-        'Deleta na tabela tb_lote
-        Dim conBd As New ConexaoBd
-        Dim Sql As String = "Delete from tb_Lote where NumLote = '" & item.SubItems(3).Text & "'"
-        conBd.ExecutarSql(Sql)
-
-        'Deleta o arquivo da diretório
-        Dim arquivo As New FileInfo(strDiretorioNFSe & "\" & item.SubItems(4).Text)
-        arquivo.Delete()
-    End Sub
-
-    Private Sub btAtualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAtualizar.Click
-        CarregarLista(strDiretorioNFSe)
-    End Sub
-
-    Private Sub btAssinarLote_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAssinarLote.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf QutArquivosSel > 1 Then
-            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
-        Else
-            If MsgBox("Tem certeza que deseja assinar o arquivo selecionado com certificado digital?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
-                ExecutarComandoLote("Assinar")
-            End If
-        End If
-    End Sub
-
-    Private Sub btEnviarLote_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btEnviarLote.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf QutArquivosSel > 1 Then
-            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
-        Else
-            If MsgBox("Tem certeza que deseja enviar o arquivo selecionado via WebService?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
-                ExecutarComandoLote("Enviar")
-            End If
-        End If
-    End Sub
-
-    Private Sub btVerificarLote_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btVerificarLote.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf QutArquivosSel > 1 Then
-            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
-        Else
-            If MsgBox("Tem certeza que deseja consultar o status do arquivo selecionado via WebService?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
-                ExecutarComandoLote("Verificar")
-            End If
-        End If
-    End Sub
-
-
-    Private Sub btImportarMensagens_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btImportarMensagens.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf QutArquivosSel > 1 Then
-            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
-        Else
-            If MsgBox("Tem certeza que deseja importar as mensagens de retorno?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
-                ExecutarComandoLote("ImportarMensagens")
-            End If
-        End If
-    End Sub
-
-    Private Sub btImportar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btImportar.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf QutArquivosSel > 1 Then
-            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
-        Else
-            If MsgBox("Tem certeza que deseja importar todas as notas geradas por esse lote?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
-                ExecutarComandoLote("Importar")
-            End If
-        End If
-    End Sub
-
-    Private Sub btExcluir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btExcluir.Click
-        If QutArquivosSel <= 0 Then
-            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
-        ElseIf MsgBox("Tem certeza que deseja excluir os arquivos selecionados?" & Chr(13) & "Comando válido somente para status diferente de Não Processado", vbQuestion + vbYesNo + vbDefaultButton2, "Confirmação") = vbYes Then
-            ExecutarComandoLote("Deletar")
-        End If
-    End Sub
-
-    Private Sub AssinarLoteRps(ByVal item As ListViewItem)
-
-
-        Dim xmlNaoAssinado As New XmlDocument
-
-        If UtilizarConversorAbrasf = "SIM" Then
-            Dim ConvAbrasf As New ConverteAbrasf(strDiretorioNFSe & "\" & item.SubItems(4).Text)
-
-            Try
-                ConvAbrasf.ConverterPadraoAbrasf()
-                BytAssinandoLote = 1
-            Catch ex As Exception
-                MsgBox(ex.Message, vbCritical, "Erro")
-                Exit Sub
-            End Try
-
-        Else
-            Dim ObjXml As New xmlNFSe.xmlNFSe
-            Dim fCertificado As New CertificadoDigital
-            Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
-            xmlNaoAssinado.Load(strDiretorioNFSe & "\" & item.SubItems(4).Text)
-            ObjXml.frmAssinarXml(MunicipioEmissao, xmlNaoAssinado.OuterXml, cert, strDiretorioNFSe, item.SubItems(3).Text)
-            BytAssinandoLote = 1
-            cert = Nothing
-            fCertificado = Nothing
-            ObjXml = Nothing
-        End If
-
-        'Destroi as variáveis
-        xmlNaoAssinado = Nothing
-
-    End Sub
-
-
-    Private Sub ServicoEnviarLoteRps_Envio(ByVal item As ListViewItem)
-        Dim fCertificado As New CertificadoDigital
-        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
-        Dim frmEnviarLoteRps_Envio As New frmExecutar()
-        frmEnviarLoteRps_Envio.TipoServico = WsNfse.TipoServico.RECEPCAO_PROCESSAMENTO_LOTE_RPS
-        frmEnviarLoteRps_Envio.ItemListView = item
-        frmEnviarLoteRps_Envio.frmGerenciar = Me
-        frmEnviarLoteRps_Envio.Certificado = cert
-        frmEnviarLoteRps_Envio.Show()
-        fCertificado = Nothing
-        cert = Nothing
-    End Sub
-
-    Private Sub ServicoConsultarSitacaoLote_Envio(ByVal item As ListViewItem)
-        Dim fCertificado As New CertificadoDigital
-        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
-        Dim frmConSitLote_Envio As New frmExecutar()
-        frmConSitLote_Envio.TipoServico = WsNfse.TipoServico.CONSULTA_SITUACAO_LOTE_RPS
-        frmConSitLote_Envio.ItemListView = item
-        frmConSitLote_Envio.frmGerenciar = Me
-        frmConSitLote_Envio.Certificado = cert
-        frmConSitLote_Envio.Show()
-        cert = Nothing
-    End Sub
-
-    Private Sub ServicoConsultarLote_Envio(ByVal item As ListViewItem)
-        Dim fCertificado As New CertificadoDigital
-        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
-        Dim frmConLote_Envio As New frmExecutar()
-        frmConLote_Envio.TipoServico = WsNfse.TipoServico.CONSULTA_LOTE_RPS
-        frmConLote_Envio.ItemListView = item
-        frmConLote_Envio.frmGerenciar = Me
-        frmConLote_Envio.Certificado = cert
-        frmConLote_Envio.Show()
-        cert = Nothing
-    End Sub
-
 
     Private Sub ExecutarComandoLote(ByVal cmd As String)
         Try
@@ -465,7 +297,132 @@ Public Class frmGerenciarLotes
         End Try
     End Sub
 
-    'Arquiva todos os lotes selecionados na pasta Arquivo
+#Region "Form"
+
+    Private Sub frmGerenciarLotes_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        CentralizarForm(Me)
+    End Sub
+
+    Private Sub frmGerenciarLotes_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+        If e.KeyCode = 27 Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub frmGerenciarLotes_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Define o tamanho do formulário
+        Me.Height = frmPrincipal.Height - 170
+        Me.Width = frmPrincipal.Width - 60
+
+        CarregarLista(StrDiretorio)
+    End Sub
+
+#End Region
+
+#Region "Botões/Componentes"
+    Private Sub btArquivar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btArquivar.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf MsgBox("Tem certeza que deseja arquivar os lotes selecionados?" & Chr(13) & "Comando válido somente para status Processado com Sucesso ou Notas Importadas", vbQuestion + vbYesNo + vbDefaultButton2, "Confirmação") = vbYes Then
+            ExecutarComandoLote("Arquivar")
+        End If
+    End Sub
+
+    Private Sub btAtualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAtualizar.Click
+        CarregarLista(strDiretorioNFSe)
+    End Sub
+
+    Private Sub btAssinarLote_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAssinarLote.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf QutArquivosSel > 1 Then
+            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
+        Else
+            If MsgBox("Tem certeza que deseja assinar o arquivo selecionado com certificado digital?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
+                ExecutarComandoLote("Assinar")
+            End If
+        End If
+    End Sub
+
+    Private Sub btEnviarLote_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btEnviarLote.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf QutArquivosSel > 1 Then
+            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
+        Else
+            If MsgBox("Tem certeza que deseja enviar o arquivo selecionado via WebService?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
+                ExecutarComandoLote("Enviar")
+            End If
+        End If
+    End Sub
+
+    Private Sub btVerificarLote_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btVerificarLote.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf QutArquivosSel > 1 Then
+            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
+        Else
+            If MsgBox("Tem certeza que deseja consultar o status do arquivo selecionado via WebService?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
+                ExecutarComandoLote("Verificar")
+            End If
+        End If
+    End Sub
+
+    Private Sub btImportarMensagens_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btImportarMensagens.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf QutArquivosSel > 1 Then
+            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
+        Else
+            If MsgBox("Tem certeza que deseja importar as mensagens de retorno?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
+                ExecutarComandoLote("ImportarMensagens")
+            End If
+        End If
+    End Sub
+
+    Private Sub btImportar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btImportar.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf QutArquivosSel > 1 Then
+            MsgBox("Para esta operação selecione somente um registro!", vbExclamation, "Atenção")
+        Else
+            If MsgBox("Tem certeza que deseja importar todas as notas geradas por esse lote?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
+                ExecutarComandoLote("Importar")
+            End If
+        End If
+    End Sub
+
+    Private Sub btExcluir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btExcluir.Click
+        If QutArquivosSel <= 0 Then
+            MsgBox("Nenhum registro selecionado!", vbExclamation, "Atenção")
+        ElseIf MsgBox("Tem certeza que deseja excluir os arquivos selecionados?" & Chr(13) & "Comando válido somente para status diferente de Não Processado", vbQuestion + vbYesNo + vbDefaultButton2, "Confirmação") = vbYes Then
+            ExecutarComandoLote("Deletar")
+        End If
+    End Sub
+
+    'Toda vez que o usuário marcar ou desmacar no ListView armazena a quantidade de itens selecionados
+    Private Sub List_ItemChecked(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemCheckedEventArgs) Handles List.ItemChecked
+        If e.Item.Checked = True Then
+            QutArquivosSel += 1
+        Else
+            QutArquivosSel -= 1
+        End If
+    End Sub
+#End Region
+
+#Region "Serviços"
+    Private Sub DeletarLote(ByVal item As ListViewItem)
+
+        'Deleta na tabela tb_lote
+        Dim conBd As New ConexaoBd
+        Dim Sql As String = "Delete from tb_Lote where NumLote = '" & item.SubItems(3).Text & "'"
+        conBd.ExecutarSql(Sql)
+
+        'Deleta o arquivo da diretório
+        Dim arquivo As New FileInfo(strDiretorioNFSe & "\" & item.SubItems(4).Text)
+        arquivo.Delete()
+    End Sub
+
     Private Sub ArquivarLotes(ByVal item As ListViewItem)
         Dim diretorioDestino As New DirectoryInfo(strDiretorioNFSe & "\Arquivo")
         Dim arquivo As New FileInfo(strDiretorioNFSe & "\" & item.SubItems(4).Text)
@@ -477,14 +434,78 @@ Public Class frmGerenciarLotes
         arquivo.Delete()
     End Sub
 
-    'Toda vez que o usuário marcar ou desmacar no ListView armazena a quantidade de itens selecionados
-    Private Sub List_ItemChecked(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemCheckedEventArgs) Handles List.ItemChecked
-        If e.Item.Checked = True Then
-            QutArquivosSel += 1
+    Private Sub AssinarLoteRps(ByVal item As ListViewItem)
+
+
+        Dim xmlNaoAssinado As New XmlDocument
+
+        If UtilizarConversorAbrasf = "SIM" Then
+            Dim ConvAbrasf As New ConverteAbrasf(strDiretorioNFSe & "\" & item.SubItems(4).Text)
+
+            Try
+                ConvAbrasf.ConverterPadraoAbrasf()
+                BytAssinandoLote = 1
+            Catch ex As Exception
+                MsgBox(ex.Message, vbCritical, "Erro")
+                Exit Sub
+            End Try
+
         Else
-            QutArquivosSel -= 1
+            Dim ObjXml As New xmlNFSe.xmlNFSe
+            Dim fCertificado As New CertificadoDigital
+            Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+            xmlNaoAssinado.Load(strDiretorioNFSe & "\" & item.SubItems(4).Text)
+            ObjXml.frmAssinarXml(MunicipioEmissao, xmlNaoAssinado.OuterXml, cert, strDiretorioNFSe, item.SubItems(3).Text)
+            BytAssinandoLote = 1
+            cert = Nothing
+            fCertificado = Nothing
+            ObjXml = Nothing
         End If
+
+        'Destroi as variáveis
+        xmlNaoAssinado = Nothing
+
     End Sub
+
+    Private Sub ServicoEnviarLoteRps_Envio(ByVal item As ListViewItem)
+        Dim fCertificado As New CertificadoDigital
+        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+        Dim frmEnviarLoteRps_Envio As New frmExecutar()
+        frmEnviarLoteRps_Envio.TipoServico = WsNfse.TipoServico.RECEPCAO_PROCESSAMENTO_LOTE_RPS
+        frmEnviarLoteRps_Envio.ItemListView = item
+        frmEnviarLoteRps_Envio.frmGerenciar = Me
+        frmEnviarLoteRps_Envio.Certificado = cert
+        frmEnviarLoteRps_Envio.Show()
+        fCertificado = Nothing
+        cert = Nothing
+    End Sub
+
+    Private Sub ServicoConsultarSitacaoLote_Envio(ByVal item As ListViewItem)
+        Dim fCertificado As New CertificadoDigital
+        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+        Dim frmConSitLote_Envio As New frmExecutar()
+        frmConSitLote_Envio.TipoServico = WsNfse.TipoServico.CONSULTA_SITUACAO_LOTE_RPS
+        frmConSitLote_Envio.ItemListView = item
+        frmConSitLote_Envio.frmGerenciar = Me
+        frmConSitLote_Envio.Certificado = cert
+        frmConSitLote_Envio.Show()
+        cert = Nothing
+    End Sub
+
+    Private Sub ServicoConsultarLote_Envio(ByVal item As ListViewItem)
+        Dim fCertificado As New CertificadoDigital
+        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+        Dim frmConLote_Envio As New frmExecutar()
+        frmConLote_Envio.TipoServico = WsNfse.TipoServico.CONSULTA_LOTE_RPS
+        frmConLote_Envio.ItemListView = item
+        frmConLote_Envio.frmGerenciar = Me
+        frmConLote_Envio.Certificado = cert
+        frmConLote_Envio.Show()
+        cert = Nothing
+    End Sub
+
+
+#End Region
 
 #End Region
 

@@ -83,7 +83,7 @@ Friend Module Funcoes
     '// Atribui valores as variàveis globais utilizadas como parâmetros do sistema
     Friend Sub CarregarParametrosSistema()
 
-        'Primeiro verifica se já existe registro. Isso irá determinar se é para salvar ou atualizar
+
         Dim conBd As New ConexaoBd
 
         'CONSULTA NA TABELA PARÂMETROS
