@@ -35,7 +35,7 @@ Public Class ConexaoBd
 
 #Region "Métodos públicos"
 
-    Friend Function Consultar(ByVal sql As String, ByVal entidade As String) As DataTable
+    Public Function Consultar(ByVal sql As String, ByVal entidade As String) As DataTable
         da = New SqlDataAdapter(sql, ConnBd.ConnectionString)
         ds = New DataSet
         da.Fill(ds, entidade)
@@ -44,7 +44,7 @@ Public Class ConexaoBd
     End Function
 
 
-    Friend Function ExecutarSqlTransacao(ByVal sql As String, ByVal transaction As SqlTransaction) As Integer
+    Public Function ExecutarSqlTransacao(ByVal sql As String, ByVal transaction As SqlTransaction) As Integer
         Dim reg As Integer
         sqlComando = New SqlCommand(sql, ConnBd, transaction)
 
@@ -55,7 +55,7 @@ Public Class ConexaoBd
         Return reg
     End Function
 
-    Friend Function ExecutarSql(ByVal sql As String) As Integer
+    Public Function ExecutarSql(ByVal sql As String) As Integer
         Dim reg As Integer
         sqlComando = New SqlCommand(sql, ConnBd)
 
@@ -66,7 +66,7 @@ Public Class ConexaoBd
         Return reg
     End Function
 
-    Friend Function ExecutarSqlNfse(ByVal sql As String, ByVal transaction As SqlTransaction, ByVal DataEmissao As DateTime, ByVal Competencia As DateTime) As Integer
+    Public Function ExecutarSqlNfse(ByVal sql As String, ByVal transaction As SqlTransaction, ByVal DataEmissao As DateTime, ByVal Competencia As DateTime) As Integer
         Dim reg As Integer
         sqlComando = New SqlCommand(sql, ConnBd, transaction)
         da = New SqlDataAdapter
@@ -85,7 +85,7 @@ Public Class ConexaoBd
         Return reg
     End Function
 
-    Friend Function ExecutarSqlParametros(ByVal sql As String, ByVal impostos As Impostos) As Integer
+    Public Function ExecutarSqlParametros(ByVal sql As String, ByVal impostos As Impostos) As Integer
         Dim reg As Integer
         sqlComando = New SqlCommand(sql, ConnBd)
         da = New SqlDataAdapter

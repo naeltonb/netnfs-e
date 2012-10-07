@@ -368,7 +368,6 @@ Partial Class frmGerenciarLotes
     Friend WithEvents RightToolStripPanel As System.Windows.Forms.ToolStripPanel
     Friend WithEvents LeftToolStripPanel As System.Windows.Forms.ToolStripPanel
     Friend WithEvents ContentPanel As System.Windows.Forms.ToolStripContentPanel
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents btEnviarLote As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents btVerificarLote As System.Windows.Forms.ToolStripButton
@@ -389,5 +388,6 @@ Partial Class frmGerenciarLotes
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Public WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
 
 End Class

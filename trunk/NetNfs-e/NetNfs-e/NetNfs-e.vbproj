@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>IconeNetNfs-e.ico</ApplicationIcon>
+    <ApplicationIcon>Imagens\IconeNetNfs-e.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -286,7 +286,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Bd.mdf</DependentUpon>
     </Content>
-    <Content Include="IconeNetNfs-e.ico" />
+    <Content Include="Imagens\IconeNetNfs-e.ico" />
     <None Include="Resources\kservices.png" />
     <None Include="Resources\FUNDO DE TELA.jpg" />
     <None Include="Resources\FUNDO DE TELA.png" />
