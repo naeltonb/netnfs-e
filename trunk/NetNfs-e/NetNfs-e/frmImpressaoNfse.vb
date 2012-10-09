@@ -220,13 +220,11 @@ Public Class frmImpressaoNfse
                     Parametro(23) = New ReportParameter("IntermediarioRazaoSocial", "")
                 End If
 
-
-                Stop
                 ''Formata CPF e CNPJ
                 Dim cpfCnpjIntermediario, NovoCpfCnpjIntermediario As String
 
                 If xmlIntermediario.GetElementsByTagName("Cnpj").Count > 0 Then
-                    cpfCnpjIntermediario = xmlTomador.GetElementsByTagName("Cnpj").Item(0).InnerText
+                    cpfCnpjIntermediario = xmlIntermediario.GetElementsByTagName("Cnpj").Item(0).InnerText
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace(".", "")
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("/", "")
                     cpfCnpjIntermediario = cpfCnpjIntermediario.Replace("-", "")
