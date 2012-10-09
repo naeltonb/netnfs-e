@@ -72,6 +72,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConfiguracoes.Designer.vb">
+      <DependentUpon>frmConfiguracoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
