@@ -3,21 +3,17 @@ Imports System.IO
 Imports System.Security.Cryptography.Xml
 Imports System.Security.Cryptography.X509Certificates
 
-Friend Module Funcoes
-
-    Sub Main()
-
-    End Sub
+Public Module Funcoes
 
     '/// Converte um String para objeto XmlDocument
-    Public Function StringToXmlDocument(ByVal strXML As String) As XmlDocument
+    Friend Function StringToXmlDocument(ByVal strXML As String) As XmlDocument
         Dim XmlDoc As New XmlDocument
         XmlDoc.Load(New StringReader(strXML))
         Return XmlDoc
     End Function
 
     '/// Converte o conteúdo de um objeto XmlDocument para String
-    Public Function XmlDocumentToString(ByRef XmlDoc As XmlDocument) As String
+    Friend Function XmlDocumentToString(ByRef XmlDoc As XmlDocument) As String
         Dim sw As New StringWriter()
         Dim xtw As New XmlTextWriter(sw)
         XmlDoc.WriteTo(xtw)
@@ -81,8 +77,7 @@ Friend Module Funcoes
     End Function
 
     '// Atribui valores as variàveis globais utilizadas como parâmetros do sistema
-    Friend Sub CarregarParametrosSistema()
-
+    Public Sub CarregarParametrosSistema()
 
         Dim conBd As New ConexaoBd
 

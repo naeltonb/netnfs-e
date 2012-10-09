@@ -9,30 +9,31 @@ Imports System.Security.Cryptography.X509Certificates
 Public Class frmGerenciarLotes
 
 #Region "Variáveis"
-
     Private _docXml As XmlDocument
     Private _infLote As infLote
     Private QutArquivosSel As Integer = 0
     Private BytAssinandoLote As Byte = 0 'Serve para identificar quando está ocorrendo uma assinatura de arquivo
-    Private StrDiretorio As String
 #End Region
 
 #Region "Construtores"
-    Public Sub New(ByVal UrlDiretorio As String)
+    Public Sub New(ByVal ModuloAutomatico As Boolean)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        StrDiretorio = UrlDiretorio
+        Me.ToolStrip1.Enabled = False
+        Me.ToolStrip1.Visible = False
+        Me.WindowState = FormWindowState.Maximized
+        Me.ControlBox = False
+        Me.MinimizeBox = True
+        Me.MaximizeBox = True
 
     End Sub
 
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-
-        StrDiretorio = strDiretorioNFSe
     End Sub
 #End Region
 
@@ -314,7 +315,7 @@ Public Class frmGerenciarLotes
         Me.Height = frmPrincipal.Height - 170
         Me.Width = frmPrincipal.Width - 60
 
-        CarregarLista(StrDiretorio)
+        CarregarLista(strDiretorioNFSe)
     End Sub
 
 #End Region
