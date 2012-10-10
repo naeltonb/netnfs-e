@@ -11,6 +11,7 @@
               <TextRun>
                 <Value>=Parameters!NumeroNfs.Value</Value>
                 <Style>
+                  <FontSize>20pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -19,10 +20,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>numeroNfs</rd:DefaultName>
-        <Top>1.16953cm</Top>
-        <Left>0.1764cm</Left>
-        <Height>0.58413cm</Height>
-        <Width>5.8633cm</Width>
+        <Top>0.73738cm</Top>
+        <Left>1.83393cm</Left>
+        <Height>0.95807cm</Height>
+        <Width>3.88827cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1579,10 +1580,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>NÚMERO:</Value>
+                <Value>Nº:</Value>
                 <Style>
                   <FontFamily>Tahoma</FontFamily>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1591,8 +1593,8 @@
         </Paragraphs>
         <Top>0.7021cm</Top>
         <Left>0.1764cm</Left>
-        <Height>0.49417cm</Height>
-        <Width>4.11749cm</Width>
+        <Height>0.99335cm</Height>
+        <Width>1.5517cm</Width>
         <ZIndex>51</ZIndex>
         <Style>
           <Border>
