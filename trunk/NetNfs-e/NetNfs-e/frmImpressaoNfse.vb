@@ -83,7 +83,14 @@ Public Class frmImpressaoNfse
 
             Dim Parametro As ReportParameter() = New ReportParameter(51) {}
 
-            Parametro(0) = New ReportParameter("NumeroNfs", xmlInfNfse.GetElementsByTagName("Numero").Item(0).InnerText)
+            Dim numeroNfs, numeroNfsFormatado, numeroNfsAno As String
+            numeroNfs = xmlInfNfse.GetElementsByTagName("Numero").Item(0).InnerText
+
+            numeroNfsAno = numeroNfs.Substring(0, 4)
+            numeroNfsFormatado = numeroNfs.Substring(4, 11)
+            numeroNfsFormatado = numeroNfsAno & "/" & CDbl(numeroNfsFormatado)
+
+            Parametro(0) = New ReportParameter("NumeroNfs", numeroNfsFormatado)
             Parametro(1) = New ReportParameter("DtEmissao", xmlInfNfse.GetElementsByTagName("DataEmissao").Item(0).InnerText)
             Parametro(2) = New ReportParameter("DtCompetencia", xmlInfNfse.GetElementsByTagName("Competencia").Item(0).InnerText)
             Parametro(3) = New ReportParameter("CodigoVerificacao", xmlInfNfse.GetElementsByTagName("CodigoVerificacao").Item(0).InnerText)
