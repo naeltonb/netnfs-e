@@ -70,7 +70,7 @@ Public Class frmExecutar
         Timer1.Enabled = False
         Me.Visible = False
         If strErro = "" Then
-            _frmGerenciar.CarregarLista(strDiretorioNFSe)
+            _frmGerenciar.CarregarLista()
 
             If RetornoMsg.Situacao = 3 Or RetornoMsg.Situacao = 4 Then
                 If MsgBox(RetornoMsg.MsgRetorno, RetornoMsg.StyleMsgBox, RetornoMsg.TituloMsg) = vbYes Then

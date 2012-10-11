@@ -18,7 +18,6 @@ C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\AutoNetNfs-e.pdb
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\AutoNetNfs-e.xml
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\NetNfs-e.exe
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\xmlNFSe.dll
-C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\WsNfs_e.dll
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\NetNfs-e.pdb
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\NetNfs-e.xml
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\xmlNFSe.pdb
@@ -29,3 +28,4 @@ C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\obj\x86\Debug\AutoNetNfs_e.R
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\bin\Debug\AutoNetNfs-e.exe.config
+C:\Users\Josimar\Google Drive\Projetos\AutoNetNfs-e\obj\x86\Debug\AutoNetNfs_e.frmConfiguracoes.resources

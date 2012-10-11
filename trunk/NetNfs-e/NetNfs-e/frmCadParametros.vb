@@ -222,11 +222,13 @@ Public Class frmCadParametros
         txtNaturezaOpercao.ValueMember = "Id"
 
         'Tipo Regime Especial Tributação
+
         Sql = "Select * from tb_RegimeEspTributacao"
         Dim dt2 As DataTable = conBd.Consultar(Sql, "tb_RegimeEspTributacao")
         txtRegimeEspTributacao.DataSource = dt2
         txtRegimeEspTributacao.DisplayMember = "Descricao"
         txtRegimeEspTributacao.ValueMember = "Id"
+
 
         'Municipios
         Sql = "Select * from tb_Municipio"

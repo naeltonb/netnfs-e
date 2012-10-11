@@ -29,6 +29,7 @@ Public Class frmGerenciarLotes
         Me.MinimizeBox = True
         Me.MaximizeBox = True
 
+
     End Sub
 
     Public Sub New()
@@ -51,8 +52,8 @@ Public Class frmGerenciarLotes
 
 #Region "Métodos públicos"
 
-    Public Sub CarregarLista(ByVal _diretorio As String)
-        Dim diretorio As New DirectoryInfo(_diretorio)
+    Public Sub CarregarLista()
+        Dim diretorio As New DirectoryInfo(strDiretorioNFSe)
         Dim arquivos() As FileInfo = diretorio.GetFiles
         Dim item As ListViewItem
         Dim subItem As ListViewItem.ListViewSubItem
@@ -282,11 +283,11 @@ Public Class frmGerenciarLotes
             'As demais mensagens de retorno são dadas pelas respectivas funções
             If CmdExecutado = True Then
                 If cmd = "Deletar" Then
-                    CarregarLista(strDiretorioNFSe)
+                    CarregarLista()
                     MsgBox("Arquivos deletados com sucesso!", vbInformation, "Confirmação")
 
                 ElseIf cmd = "Arquivar" Then
-                    CarregarLista(strDiretorioNFSe)
+                    CarregarLista()
                     MsgBox("Lotes arquivados com sucesso!", vbInformation, "Confirmação")
                 End If
             End If
@@ -315,7 +316,7 @@ Public Class frmGerenciarLotes
         Me.Height = frmPrincipal.Height - 170
         Me.Width = frmPrincipal.Width - 60
 
-        CarregarLista(strDiretorioNFSe)
+        CarregarLista()
     End Sub
 
 #End Region
@@ -330,7 +331,7 @@ Public Class frmGerenciarLotes
     End Sub
 
     Private Sub btAtualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAtualizar.Click
-        CarregarLista(strDiretorioNFSe)
+        CarregarLista()
     End Sub
 
     Private Sub btAssinarLote_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAssinarLote.Click
@@ -520,7 +521,7 @@ Public Class frmGerenciarLotes
     Private Sub List_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles List.MouseMove
         If BytAssinandoLote = 1 Then
             BytAssinandoLote = 0
-            CarregarLista(strDiretorioNFSe)
+            CarregarLista()
         End If
     End Sub
 #End Region

@@ -70,7 +70,7 @@ Public Class ServicosWs
     'Função principal desta classe. Tem a função de identificar o tipo de serviço solicitado
     'e faz a comunicação com o WebService. Identifica os tipos de retorno bem como a situação
     'do lote em referência
-    Friend Sub EnviarRequisicao()
+    Public Sub EnviarRequisicao()
 
         Try
 
@@ -249,6 +249,7 @@ Public Class ServicosWs
             RetornoMsg.Situacao = 0
 
             Throw New Exception(ex.Message)
+
         End Try
     End Sub
 
