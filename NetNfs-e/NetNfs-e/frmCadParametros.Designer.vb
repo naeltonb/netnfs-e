@@ -81,6 +81,7 @@ Partial Class frmCadParametros
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupDemaisParamentros = New System.Windows.Forms.GroupBox()
         Me.GroupBox29 = New System.Windows.Forms.GroupBox()
+        Me.PicLogo = New System.Windows.Forms.PictureBox()
         Me.btLocalizarLogo = New System.Windows.Forms.Button()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.lblConversorAbrasf = New System.Windows.Forms.Label()
@@ -120,12 +121,11 @@ Partial Class frmCadParametros
         Me.txtAssuntoEmail = New System.Windows.Forms.TextBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btSalvar = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.btEditar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.PicLogo = New System.Windows.Forms.PictureBox()
-        Me.btSalvar = New System.Windows.Forms.ToolStripButton()
-        Me.btEditar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -157,6 +157,7 @@ Partial Class frmCadParametros
         Me.TabPage3.SuspendLayout()
         Me.GroupDemaisParamentros.SuspendLayout()
         Me.GroupBox29.SuspendLayout()
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox14.SuspendLayout()
@@ -172,7 +173,6 @@ Partial Class frmCadParametros
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox23.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStripContainer1
@@ -514,7 +514,7 @@ Partial Class frmCadParametros
         Me.txtRegimeEspTributacao.Name = "txtRegimeEspTributacao"
         Me.txtRegimeEspTributacao.Size = New System.Drawing.Size(316, 24)
         Me.txtRegimeEspTributacao.TabIndex = 5
-        Me.txtRegimeEspTributacao.Tag = "SIM"
+        Me.txtRegimeEspTributacao.Tag = "NAO"
         '
         'GroupBox4
         '
@@ -852,6 +852,15 @@ Partial Class frmCadParametros
         Me.GroupBox29.TabStop = False
         Me.GroupBox29.Tag = "NAO"
         Me.GroupBox29.Text = "Logo do prestador"
+        '
+        'PicLogo
+        '
+        Me.PicLogo.Location = New System.Drawing.Point(9, 21)
+        Me.PicLogo.Name = "PicLogo"
+        Me.PicLogo.Size = New System.Drawing.Size(243, 184)
+        Me.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicLogo.TabIndex = 20
+        Me.PicLogo.TabStop = False
         '
         'btLocalizarLogo
         '
@@ -1305,10 +1314,30 @@ Partial Class frmCadParametros
         Me.ToolStrip1.Size = New System.Drawing.Size(746, 40)
         Me.ToolStrip1.TabIndex = 2
         '
+        'btSalvar
+        '
+        Me.btSalvar.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btSalvar.Image = CType(resources.GetObject("btSalvar.Image"), System.Drawing.Image)
+        Me.btSalvar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btSalvar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btSalvar.Name = "btSalvar"
+        Me.btSalvar.Size = New System.Drawing.Size(75, 37)
+        Me.btSalvar.Text = "&Salvar"
+        '
         'toolStripSeparator
         '
         Me.toolStripSeparator.Name = "toolStripSeparator"
         Me.toolStripSeparator.Size = New System.Drawing.Size(6, 40)
+        '
+        'btEditar
+        '
+        Me.btEditar.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btEditar.Image = CType(resources.GetObject("btEditar.Image"), System.Drawing.Image)
+        Me.btEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btEditar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btEditar.Name = "btEditar"
+        Me.btEditar.Size = New System.Drawing.Size(72, 37)
+        Me.btEditar.Text = "E&ditar"
         '
         'ToolStripSeparator1
         '
@@ -1321,35 +1350,6 @@ Partial Class frmCadParametros
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
         Me.ToolStripLabel1.Size = New System.Drawing.Size(650, 37)
         Me.ToolStripLabel1.Text = "Menu de funções"
-        '
-        'PicLogo
-        '
-        Me.PicLogo.Location = New System.Drawing.Point(9, 21)
-        Me.PicLogo.Name = "PicLogo"
-        Me.PicLogo.Size = New System.Drawing.Size(243, 184)
-        Me.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicLogo.TabIndex = 20
-        Me.PicLogo.TabStop = False
-        '
-        'btSalvar
-        '
-        Me.btSalvar.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btSalvar.Image = CType(resources.GetObject("btSalvar.Image"), System.Drawing.Image)
-        Me.btSalvar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btSalvar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btSalvar.Name = "btSalvar"
-        Me.btSalvar.Size = New System.Drawing.Size(75, 37)
-        Me.btSalvar.Text = "&Salvar"
-        '
-        'btEditar
-        '
-        Me.btEditar.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btEditar.Image = CType(resources.GetObject("btEditar.Image"), System.Drawing.Image)
-        Me.btEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btEditar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btEditar.Name = "btEditar"
-        Me.btEditar.Size = New System.Drawing.Size(72, 37)
-        Me.btEditar.Text = "E&ditar"
         '
         'frmCadParametros
         '
@@ -1411,6 +1411,7 @@ Partial Class frmCadParametros
         Me.TabPage3.ResumeLayout(False)
         Me.GroupDemaisParamentros.ResumeLayout(False)
         Me.GroupBox29.ResumeLayout(False)
+        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -1438,7 +1439,6 @@ Partial Class frmCadParametros
         Me.GroupBox23.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.PicLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

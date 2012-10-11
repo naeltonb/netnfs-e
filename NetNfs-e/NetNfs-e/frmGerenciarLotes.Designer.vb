@@ -354,7 +354,6 @@ Partial Class frmGerenciarLotes
 
     End Sub
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents List As System.Windows.Forms.ListView
     Friend WithEvents Col_Sel As System.Windows.Forms.ColumnHeader
     Friend WithEvents Col_StatusAssinatura As System.Windows.Forms.ColumnHeader
     Friend WithEvents Col_Status As System.Windows.Forms.ColumnHeader
@@ -389,5 +388,6 @@ Partial Class frmGerenciarLotes
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Public WithEvents List As System.Windows.Forms.ListView
 
 End Class
