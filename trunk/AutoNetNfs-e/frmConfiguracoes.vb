@@ -104,9 +104,6 @@ Public Class frmConfiguracoes
                 Else
                     chkArquivar.Checked = False
                 End If
-
-                txtSerieCertificado.Text = dr("SerieCertificado")
-
                 dr = Nothing
             Else
 
@@ -136,12 +133,13 @@ Public Class frmConfiguracoes
             Dim dt As DataTable = conBd.Consultar(Sql, "tb_ConfigAutomatico")
 
             If dt.Rows.Count > 0 Then
-                Sql = "Update tb_ConfigAutomatico set Assinar = '" & chkAssinar.Tag & "', Enviar = '" & chkEnviar.Tag & "', Verificar = '" & chkVerificar.Tag & "', Importar = '" & chkImportar.Tag & "', EmailAuto = '" & chkEmail.Tag & "', Arquivar = '" & chkArquivar.Tag & "',SerieCertificado = '" & txtSerieCertificado.Text & "'"
+                Sql = "Update tb_ConfigAutomatico set Assinar = '" & chkAssinar.Tag & "', Enviar = '" & chkEnviar.Tag & "', Verificar = '" & chkVerificar.Tag & "', Importar = '" & chkImportar.Tag & "', EmailAuto = '" & chkEmail.Tag & "', Arquivar = '" & chkArquivar.Tag & "'"
             Else
-                Sql = "Insert into tb_ConfigAutomatico(Assinar,Enviar,Verificar,Importar,EmailAuto,Arquivar,SerieCertificado) values ('" & chkAssinar.Tag & "','" & chkEnviar.Tag & "','" & chkVerificar.Tag & "','" & chkImportar.Tag & "','" & chkEmail.Tag & "','" & chkArquivar.Tag & "','" & txtSerieCertificado.Text & "')"
+                Sql = "Insert into tb_ConfigAutomatico(Assinar,Enviar,Verificar,Importar,EmailAuto,Arquivar) values ('" & chkAssinar.Tag & "','" & chkEnviar.Tag & "','" & chkVerificar.Tag & "','" & chkImportar.Tag & "','" & chkEmail.Tag & "','" & chkArquivar.Tag & "')"
             End If
 
             conBd.ExecutarSql(Sql)
+            CarregarParametrosAutomaticos()
             MsgBox("Dados atualizados com sucesso!", vbInformation, "Confirmação")
             'Destroi as variáveis utilizadas
             conBd = Nothing
@@ -157,26 +155,11 @@ Public Class frmConfiguracoes
         If MsgBox("Tem certeza que deseja salvar as configurações?", vbQuestion + vbYesNo, "Confirmação") = vbYes Then
             SalvarDados()
             GroupDados.Enabled = False
-            GroupBox1.Enabled = False
         End If
     End Sub
 
     Private Sub btEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btEditar.Click
         GroupDados.Enabled = True
-        GroupBox1.Enabled = True
     End Sub
 
-    Private Sub btCertificado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btCertificado.Click
-        Try
-            Dim certificado As New X509Certificate2
-            Dim fcert As New CertificadoDigital
-            certificado = fcert.SelecionarCertificado("")
-            txtSerieCertificado.Text = certificado.SerialNumber
-        Catch ex As Exception
-            MsgBox(ex.Message, vbCritical, "Erro")
-            Err.Clear()
-        End Try
-
-
-    End Sub
 End Class

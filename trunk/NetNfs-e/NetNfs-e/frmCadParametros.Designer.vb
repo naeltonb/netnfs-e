@@ -126,6 +126,9 @@ Partial Class frmCadParametros
         Me.btEditar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.GroupBox33 = New System.Windows.Forms.GroupBox()
+        Me.btCertificado = New System.Windows.Forms.Button()
+        Me.txtSerieCertificado = New System.Windows.Forms.TextBox()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -173,6 +176,7 @@ Partial Class frmCadParametros
         Me.GroupBox19.SuspendLayout()
         Me.GroupBox23.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.GroupBox33.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripContainer1
@@ -830,6 +834,7 @@ Partial Class frmCadParametros
         '
         'GroupDemaisParamentros
         '
+        Me.GroupDemaisParamentros.Controls.Add(Me.GroupBox33)
         Me.GroupDemaisParamentros.Controls.Add(Me.GroupBox29)
         Me.GroupDemaisParamentros.Controls.Add(Me.GroupBox6)
         Me.GroupDemaisParamentros.Controls.Add(Me.GroupBox1)
@@ -881,7 +886,7 @@ Partial Class frmCadParametros
         Me.GroupBox6.Controls.Add(Me.OptConversorAbrasfNao)
         Me.GroupBox6.Controls.Add(Me.OptConversorAbrasfSim)
         Me.GroupBox6.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(6, 135)
+        Me.GroupBox6.Location = New System.Drawing.Point(12, 197)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(280, 51)
         Me.GroupBox6.TabIndex = 21
@@ -930,7 +935,7 @@ Partial Class frmCadParametros
         '
         Me.GroupBox1.Controls.Add(Me.txtAmbiente)
         Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 70)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 132)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(280, 51)
         Me.GroupBox1.TabIndex = 20
@@ -968,7 +973,6 @@ Partial Class frmCadParametros
         Me.txtDiretorioLoteRps.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiretorioLoteRps.Location = New System.Drawing.Point(6, 22)
         Me.txtDiretorioLoteRps.Name = "txtDiretorioLoteRps"
-        Me.txtDiretorioLoteRps.ReadOnly = True
         Me.txtDiretorioLoteRps.Size = New System.Drawing.Size(648, 23)
         Me.txtDiretorioLoteRps.TabIndex = 25
         Me.txtDiretorioLoteRps.Tag = "SIM"
@@ -1351,6 +1355,39 @@ Partial Class frmCadParametros
         Me.ToolStripLabel1.Size = New System.Drawing.Size(650, 37)
         Me.ToolStripLabel1.Text = "Menu de funções"
         '
+        'GroupBox33
+        '
+        Me.GroupBox33.Controls.Add(Me.btCertificado)
+        Me.GroupBox33.Controls.Add(Me.txtSerieCertificado)
+        Me.GroupBox33.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox33.ForeColor = System.Drawing.Color.Maroon
+        Me.GroupBox33.Location = New System.Drawing.Point(6, 71)
+        Me.GroupBox33.Name = "GroupBox33"
+        Me.GroupBox33.Size = New System.Drawing.Size(429, 55)
+        Me.GroupBox33.TabIndex = 20
+        Me.GroupBox33.TabStop = False
+        Me.GroupBox33.Text = "Certificado digital (série)"
+        '
+        'btCertificado
+        '
+        Me.btCertificado.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btCertificado.ForeColor = System.Drawing.Color.Black
+        Me.btCertificado.Location = New System.Drawing.Point(382, 21)
+        Me.btCertificado.Name = "btCertificado"
+        Me.btCertificado.Size = New System.Drawing.Size(41, 25)
+        Me.btCertificado.TabIndex = 1
+        Me.btCertificado.Text = "..."
+        Me.btCertificado.UseVisualStyleBackColor = True
+        '
+        'txtSerieCertificado
+        '
+        Me.txtSerieCertificado.Location = New System.Drawing.Point(12, 22)
+        Me.txtSerieCertificado.Name = "txtSerieCertificado"
+        Me.txtSerieCertificado.ReadOnly = True
+        Me.txtSerieCertificado.Size = New System.Drawing.Size(364, 26)
+        Me.txtSerieCertificado.TabIndex = 0
+        Me.txtSerieCertificado.Tag = "NÃO"
+        '
         'frmCadParametros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1439,6 +1476,8 @@ Partial Class frmCadParametros
         Me.GroupBox23.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.GroupBox33.ResumeLayout(False)
+        Me.GroupBox33.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1544,4 +1583,7 @@ Partial Class frmCadParametros
     Friend WithEvents txtCopiaEmail As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox32 As System.Windows.Forms.GroupBox
     Friend WithEvents txtAliquotaISS As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox33 As System.Windows.Forms.GroupBox
+    Friend WithEvents btCertificado As System.Windows.Forms.Button
+    Friend WithEvents txtSerieCertificado As System.Windows.Forms.TextBox
 End Class

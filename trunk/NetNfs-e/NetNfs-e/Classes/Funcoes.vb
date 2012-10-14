@@ -105,6 +105,7 @@ Public Module Funcoes
             End Select
 
             UtilizarConversorAbrasf = dr("ConverterPadraoAbrasf")
+            SerieCertificado = dr("SerieCertificado")
 
 
             'CONSULTA NA TABELA DE CADASTRO DA EMPRESA
@@ -145,6 +146,13 @@ Public Module Funcoes
         Next
     End Sub
 
+    '// Retorna a Série do certificado do cliente
+    Public ReadOnly Property SerieCertificadoCliente As String
+        Get
+            Return SerieCertificado
+        End Get
+    End Property
+
 End Module
 
 Public Module RetornoMsg
@@ -166,6 +174,7 @@ Friend Module ParametrosSistema
     Public CnpjDoEmitente As String
     Public InscricaoMunicipalDoEmitente As String
     Public UtilizarConversorAbrasf As String
+    Public SerieCertificado As String
 
     'Mensagem de retorno para usuário caso os parâmetros e o cadastro
     'do cliente não estejam configurados

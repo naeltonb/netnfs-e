@@ -36,15 +36,11 @@ Partial Class frmConfiguracoes
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btEditar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.txtSerieCertificado = New System.Windows.Forms.TextBox()
-        Me.btCertificado = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         Me.GroupDados.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripContainer1
@@ -52,13 +48,12 @@ Partial Class frmConfiguracoes
         '
         'ToolStripContainer1.ContentPanel
         '
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.GroupBox1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.GroupDados)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(590, 212)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(590, 146)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(590, 252)
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(590, 186)
         Me.ToolStripContainer1.TabIndex = 0
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
@@ -199,44 +194,11 @@ Partial Class frmConfiguracoes
         Me.ToolStripLabel1.Size = New System.Drawing.Size(500, 37)
         Me.ToolStripLabel1.Text = "Menu de funções"
         '
-        'txtSerieCertificado
-        '
-        Me.txtSerieCertificado.Location = New System.Drawing.Point(12, 22)
-        Me.txtSerieCertificado.Name = "txtSerieCertificado"
-        Me.txtSerieCertificado.ReadOnly = True
-        Me.txtSerieCertificado.Size = New System.Drawing.Size(506, 26)
-        Me.txtSerieCertificado.TabIndex = 0
-        '
-        'btCertificado
-        '
-        Me.btCertificado.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btCertificado.ForeColor = System.Drawing.Color.Black
-        Me.btCertificado.Location = New System.Drawing.Point(524, 21)
-        Me.btCertificado.Name = "btCertificado"
-        Me.btCertificado.Size = New System.Drawing.Size(41, 25)
-        Me.btCertificado.TabIndex = 1
-        Me.btCertificado.Text = "..."
-        Me.btCertificado.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.btCertificado)
-        Me.GroupBox1.Controls.Add(Me.txtSerieCertificado)
-        Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Maroon
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 144)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(571, 55)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Certificado digital (série)"
-        '
         'frmConfiguracoes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(590, 252)
+        Me.ClientSize = New System.Drawing.Size(590, 186)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -254,8 +216,6 @@ Partial Class frmConfiguracoes
         Me.GroupDados.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -272,7 +232,4 @@ Partial Class frmConfiguracoes
     Friend WithEvents chkEnviar As System.Windows.Forms.CheckBox
     Friend WithEvents chkAssinar As System.Windows.Forms.CheckBox
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents btCertificado As System.Windows.Forms.Button
-    Friend WithEvents txtSerieCertificado As System.Windows.Forms.TextBox
 End Class

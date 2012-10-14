@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Security.Cryptography.X509Certificates
 
 Public Class frmCadParametros
 
@@ -42,17 +43,17 @@ Public Class frmCadParametros
 
         If dt.Rows.Count <= 0 Then
 
-            Sql = "Insert into tb_Parametros(TipoRps,NumRps,NaturezaOperacao,RegimeEspTributacao,OptanteSimples,IncentivadorCultural,ItemListaServico,CodigoTributacao,NumNota,DiretorioLoteRps,NumLote,Serie,CodigoMunicipio,PIS,COFINS,CSLL,AliquotaIRRF,ValorLimiteImpostoIRRF,AcumulaImposto,AcumulaIRRF,Ambiente,ConverterPadraoAbrasf,EmailRemente,AssuntoEmail,MensagemEmail,UtilizarNumNfseNoAssunto,UtilizarEmailCliente,EmailDestinatarioPadrao,EnderecoSmtp,PortaSmtp,SenhaEmail,EnviarCopiaEmail,EmailCopia) values" & _
+            Sql = "Insert into tb_Parametros(TipoRps,NumRps,NaturezaOperacao,RegimeEspTributacao,OptanteSimples,IncentivadorCultural,ItemListaServico,CodigoTributacao,NumNota,DiretorioLoteRps,NumLote,Serie,CodigoMunicipio,PIS,COFINS,CSLL,AliquotaIRRF,ValorLimiteImpostoIRRF,AcumulaImposto,AcumulaIRRF,Ambiente,ConverterPadraoAbrasf,EmailRemente,AssuntoEmail,MensagemEmail,UtilizarNumNfseNoAssunto,UtilizarEmailCliente,EmailDestinatarioPadrao,EnderecoSmtp,PortaSmtp,SenhaEmail,EnviarCopiaEmail,EmailCopia,SerieCertificado) values" & _
                     "('" & txtTipoRps.SelectedValue & "','" & Trim(txtNumRps.Text) & "','" & txtNaturezaOpercao.SelectedValue & "','" & txtRegimeEspTributacao.SelectedValue & "','" & lblSimples.Text & "','" & lblInsCultural.Text & "','" & txtListaServiços.SelectedValue & "'," & _
                     "'" & Trim(txtCodigoTributacao.Text) & "','" & Trim(txtNumNfse.Text) & "','" & Trim(txtDiretorioLoteRps.Text) & "','" & Trim(txtNumLoteRps.Text) & "','" & Trim(txtSerie.Text) & "','" & txtMunicipio.SelectedValue & "',@PIS,@COFINS,@CSLL," & _
-                    "@AliquotaIRRF,@AliquotaISS,@ValorLimiteImpostoIRRF,'" & lblAcumlaImposto.Text & "','" & lblAcumulaIRRF.Text & "', '" & txtAmbiente.Text & "','" & lblConversorAbrasf.Text & "','" & Trim(txtEmailRemetente.Text) & "','" & txtAssuntoEmail.Text & "' )" & _
-                    "'" & txtMensagemEmail.Text & "','" & lblNfseNoAssunto.Text & "','" & lblEmailDestinatario.Text & "','" & txtEmailPadrao.Text & "','" & txtEnderecoSmpt.Text & "','" & txtPortaSmtp.Text & "','" & txtSenhaEmail.Text & "','" & lblEnviarCopiaEmail.Text & "','" & txtCopiaEmail.Text & "'"
+                    "@AliquotaIRRF,@AliquotaISS,@ValorLimiteImpostoIRRF,'" & lblAcumlaImposto.Text & "','" & lblAcumulaIRRF.Text & "', '" & txtAmbiente.Text & "','" & lblConversorAbrasf.Text & "','" & Trim(txtEmailRemetente.Text) & "','" & txtAssuntoEmail.Text & "'" & _
+                    "'" & txtMensagemEmail.Text & "','" & lblNfseNoAssunto.Text & "','" & lblEmailDestinatario.Text & "','" & txtEmailPadrao.Text & "','" & txtEnderecoSmpt.Text & "','" & txtPortaSmtp.Text & "','" & txtSenhaEmail.Text & "','" & lblEnviarCopiaEmail.Text & "','" & txtCopiaEmail.Text & "','" & txtSerieCertificado.Text & "')"
             strMensagem = "Dados incluidos com sucesso!"
         Else
             Sql = "Update tb_Parametros set TipoRps = '" & txtTipoRps.SelectedValue & "', NumRps = '" & Trim(txtNumRps.Text) & "',NaturezaOperacao = '" & txtNaturezaOpercao.SelectedValue & "',RegimeEspTributacao = '" & txtRegimeEspTributacao.SelectedValue & "',OptanteSimples = '" & lblSimples.Text & "'," & _
                 "IncentivadorCultural = '" & lblInsCultural.Text & "',ItemListaServico = '" & txtListaServiços.SelectedValue & "', CodigoTributacao = '" & Trim(txtCodigoTributacao.Text) & "',NumNota = '" & Trim(txtNumNfse.Text) & "',DiretorioLoteRps = '" & Trim(txtDiretorioLoteRps.Text) & "',NumLote = '" & Trim(txtNumLoteRps.Text) & "'," & _
                 "Serie = '" & Trim(txtSerie.Text) & "',CodigoMunicipio = '" & txtMunicipio.SelectedValue & "',PIS = @PIS,COFINS = @COFINS,CSLL = @CSLL,AliquotaIRRF = @AliquotaIRRF,AliquotaISS = @AliquotaISS,ValorLimiteImpostoIRRF = @ValorLimiteImpostoIRRF,AcumulaImposto = '" & lblAcumlaImposto.Text & "',AcumulaIRRF = '" & lblAcumulaIRRF.Text & "',Ambiente ='" & txtAmbiente.Text & "',ConverterPadraoAbrasf = '" & lblConversorAbrasf.Text & "'," & _
-                "EmailRemetente = '" & Trim(txtEmailRemetente.Text) & "',AssuntoEmail = '" & txtAssuntoEmail.Text & "',MensagemEmail = '" & txtMensagemEmail.Text & "',UtilizarNumNfseNoAssunto = '" & lblNfseNoAssunto.Text & "',UtilizarEmailCliente = '" & lblEmailDestinatario.Text & "',EmailDestinatarioPadrao = '" & Trim(txtEmailPadrao.Text) & "',EnderecoSmtp = '" & Trim(txtEnderecoSmpt.Text) & "',PortaSmtp = '" & txtPortaSmtp.Text & "',SenhaEmail = '" & txtSenhaEmail.Text & "',EnviarCopiaEmail = '" & lblEnviarCopiaEmail.Text & "',EmailCopia = '" & txtCopiaEmail.Text & "'"
+                "EmailRemetente = '" & Trim(txtEmailRemetente.Text) & "',AssuntoEmail = '" & txtAssuntoEmail.Text & "',MensagemEmail = '" & txtMensagemEmail.Text & "',UtilizarNumNfseNoAssunto = '" & lblNfseNoAssunto.Text & "',UtilizarEmailCliente = '" & lblEmailDestinatario.Text & "',EmailDestinatarioPadrao = '" & Trim(txtEmailPadrao.Text) & "',EnderecoSmtp = '" & Trim(txtEnderecoSmpt.Text) & "',PortaSmtp = '" & txtPortaSmtp.Text & "',SenhaEmail = '" & txtSenhaEmail.Text & "',EnviarCopiaEmail = '" & lblEnviarCopiaEmail.Text & "',EmailCopia = '" & txtCopiaEmail.Text & "',SerieCertificado = '" & txtSerieCertificado.Text & "'"
             strMensagem = "Dados atualizados com sucesso!"
         End If
 
@@ -182,6 +183,7 @@ Public Class frmCadParametros
             End If
             txtCopiaEmail.Text = dr("EmailCopia")
 
+            txtSerieCertificado.Text = dr("SerieCertificado")
 
 
             Dim diretorio As New DirectoryInfo(My.Application.Info.DirectoryPath & "\LogoPrestador")
@@ -414,4 +416,15 @@ Public Class frmCadParametros
     End Sub
 
 
+    Private Sub btCertificado_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btCertificado.Click
+        Try
+            Dim certificado As New X509Certificate2
+            Dim fcert As New CertificadoDigital
+            certificado = fcert.SelecionarCertificado("")
+            txtSerieCertificado.Text = certificado.SerialNumber
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Erro")
+            Err.Clear()
+        End Try
+    End Sub
 End Class

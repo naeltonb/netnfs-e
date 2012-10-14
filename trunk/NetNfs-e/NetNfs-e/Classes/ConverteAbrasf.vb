@@ -2,8 +2,9 @@
 Public Class ConverteAbrasf
 
 #Region "Construtores"
-    Public Sub New(ByRef FileNameXml As String)
+    Public Sub New(ByRef FileNameXml As String, ByVal UtilizarFormNaAssinatura As Boolean)
         FileNameXmlAbrasf = FileNameXml
+        UtilizarForm = UtilizarFormNaAssinatura
         XmlAbrasf = New XmlDocument
         XmlAbrasf.Load(FileNameXml)
         InformacoesLote = New InfLote
@@ -12,6 +13,7 @@ Public Class ConverteAbrasf
 #End Region
 
 #Region "Variáveis"
+    Private UtilizarForm As Boolean
     Private FileNameXmlAbrasf As String
     Private XmlAbrasf As XmlDocument
     Private InformacoesLote As InfLote
@@ -737,7 +739,7 @@ Public Class ConverteAbrasf
 
         End Try
         'Utiliza a Dll XmlNfse para Criar/assinar o lote e salvar no diretório
-        objXML.GerarXmlLoteRps(objXML, FileNameXmlAbrasf)
+        objXML.GerarXmlLoteRps(objXML, FileNameXmlAbrasf, UtilizarForm, SerieCertificado)
 
     End Sub
 #End Region

@@ -131,7 +131,7 @@ Partial Class frmGerenciarLotes
         'Col_Status
         '
         Me.Col_Status.Text = "Status envio"
-        Me.Col_Status.Width = 175
+        Me.Col_Status.Width = 185
         '
         'Col_NumLote
         '

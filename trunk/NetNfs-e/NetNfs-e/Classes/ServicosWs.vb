@@ -221,9 +221,12 @@ Public Class ServicosWs
                     xmlRetorno.PreserveWhitespace = False
                     xmlRetorno.LoadXml(strRetorno)
 
+                    'Pega as mensagens de retorno
+                    Dim MensagensRetornoLote As New List(Of Retorno)
+                    MensagensRetornoLote = ListaMensagemRetornoLote(xmlRetorno)
 
                     'Atualiza o banco de dados e salva as mensagens de retorno
-                    InserirTabelaLote(_item.SubItems(3).Text, RetornoMsg.Situacao, _item.SubItems(8).Text, _item.SubItems(7).Text, ListaMensagemRetornoLote(xmlRetorno))
+                    InserirTabelaLote(_item.SubItems(3).Text, RetornoMsg.Situacao, _item.SubItems(8).Text, _item.SubItems(7).Text, MensagensRetornoLote)
 
                     'Personalisa a mensagem de retorno para o usuário
                     If RetornoMsg.Situacao = 6 Then

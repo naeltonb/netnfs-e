@@ -53,6 +53,8 @@ Public Class frmGerenciarLotes
 #Region "Métodos públicos"
 
     Public Sub CarregarLista()
+
+
         Dim diretorio As New DirectoryInfo(strDiretorioNFSe)
         Dim arquivos() As FileInfo = diretorio.GetFiles
         Dim item As ListViewItem
@@ -101,6 +103,8 @@ Public Class frmGerenciarLotes
                         subItem.ForeColor = Color.Green
                     Case "Notas importadas"
                         subItem.ForeColor = Color.Blue
+                    Case "Mensagem de erro importada"
+                        subItem.ForeColor = Color.Red
 
 
                 End Select
@@ -218,7 +222,7 @@ Public Class frmGerenciarLotes
                         Case "Assinar"
                             If item.SubItems(1).Text <> "Assinado" Then
                                 CmdExecutado = True
-                                AssinarLoteRps(item)
+                                AssinarLoteRps(item, True)
                             End If
 
                             'ENVIAR LOTE PARA PREFEITURA
@@ -242,12 +246,12 @@ Public Class frmGerenciarLotes
                             'IMPORTA AS MENSAGENS DE RETORNO 
                         Case "ImportarMensagens"
 
-                            If item.SubItems(2).Text = "Processado com erro" Then
+                            If item.SubItems(2).Text = "Processado com erro" Or item.SubItems(2).Text = "Mensagem de erro importada" Then
                                 CmdExecutado = True
                                 RetornoMsg.Situacao = 3
                                 ServicoConsultarLote_Envio(item)
                             Else
-                                MsgBox("Para essa opção o Status do lote deve ser = Processado com erro", vbExclamation, "Atenção")
+                                MsgBox("Para essa opção o Status do lote deve ser = Processado com erro ou Mensagem de erro importada", vbExclamation, "Atenção")
                             End If
 
                             'IMPORTA AS NOTAS GERADAS PELO RESPECTIVO LOTE ImportarMensagens
@@ -425,7 +429,7 @@ Public Class frmGerenciarLotes
         arquivo.Delete()
     End Sub
 
-    Private Sub ArquivarLotes(ByVal item As ListViewItem)
+    Public Sub ArquivarLotes(ByVal item As ListViewItem)
         Dim diretorioDestino As New DirectoryInfo(strDiretorioNFSe & "\Arquivo")
         Dim arquivo As New FileInfo(strDiretorioNFSe & "\" & item.SubItems(4).Text)
 
@@ -436,28 +440,28 @@ Public Class frmGerenciarLotes
         arquivo.Delete()
     End Sub
 
-    Private Sub AssinarLoteRps(ByVal item As ListViewItem)
+    Public Function AssinarLoteRps(ByVal item As ListViewItem, ByVal UtilizarForm As Boolean) As String
 
 
         Dim xmlNaoAssinado As New XmlDocument
 
         If UtilizarConversorAbrasf = "SIM" Then
-            Dim ConvAbrasf As New ConverteAbrasf(strDiretorioNFSe & "\" & item.SubItems(4).Text)
+            Dim ConvAbrasf As New ConverteAbrasf(strDiretorioNFSe & "\" & item.SubItems(4).Text, UtilizarForm)
 
             Try
                 ConvAbrasf.ConverterPadraoAbrasf()
                 BytAssinandoLote = 1
             Catch ex As Exception
                 MsgBox(ex.Message, vbCritical, "Erro")
-                Exit Sub
+                Exit Function
             End Try
 
         Else
             Dim ObjXml As New xmlNFSe.xmlNFSe
             Dim fCertificado As New CertificadoDigital
-            Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+            Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado(SerieCertificado)
             xmlNaoAssinado.Load(strDiretorioNFSe & "\" & item.SubItems(4).Text)
-            ObjXml.frmAssinarXml(MunicipioEmissao, xmlNaoAssinado.OuterXml, cert, strDiretorioNFSe, item.SubItems(3).Text)
+            ObjXml.frmAssinarXml(MunicipioEmissao, xmlNaoAssinado.OuterXml, cert, strDiretorioNFSe & "\" & item.SubItems(4).Text, item.SubItems(3).Text, UtilizarForm)
             BytAssinandoLote = 1
             cert = Nothing
             fCertificado = Nothing
@@ -467,11 +471,11 @@ Public Class frmGerenciarLotes
         'Destroi as variáveis
         xmlNaoAssinado = Nothing
 
-    End Sub
+    End Function
 
     Private Sub ServicoEnviarLoteRps_Envio(ByVal item As ListViewItem)
         Dim fCertificado As New CertificadoDigital
-        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado(SerieCertificado)
         Dim frmEnviarLoteRps_Envio As New frmExecutar()
         frmEnviarLoteRps_Envio.TipoServico = WsNfse.TipoServico.RECEPCAO_PROCESSAMENTO_LOTE_RPS
         frmEnviarLoteRps_Envio.ItemListView = item
@@ -484,7 +488,7 @@ Public Class frmGerenciarLotes
 
     Private Sub ServicoConsultarSitacaoLote_Envio(ByVal item As ListViewItem)
         Dim fCertificado As New CertificadoDigital
-        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado(SerieCertificado)
         Dim frmConSitLote_Envio As New frmExecutar()
         frmConSitLote_Envio.TipoServico = WsNfse.TipoServico.CONSULTA_SITUACAO_LOTE_RPS
         frmConSitLote_Envio.ItemListView = item
@@ -496,7 +500,7 @@ Public Class frmGerenciarLotes
 
     Private Sub ServicoConsultarLote_Envio(ByVal item As ListViewItem)
         Dim fCertificado As New CertificadoDigital
-        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado("")
+        Dim cert As X509Certificate2 = fCertificado.SelecionarCertificado(SerieCertificado)
         Dim frmConLote_Envio As New frmExecutar()
         frmConLote_Envio.TipoServico = WsNfse.TipoServico.CONSULTA_LOTE_RPS
         frmConLote_Envio.ItemListView = item
