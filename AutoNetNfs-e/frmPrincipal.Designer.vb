@@ -53,6 +53,7 @@ Partial Class frmPrincipal
         Me.MenuSair = New System.Windows.Forms.ToolStripMenuItem()
         Me.BGW1 = New System.ComponentModel.BackgroundWorker()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -274,6 +275,10 @@ Partial Class frmPrincipal
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 10000
         '
+        'Timer2
+        '
+        Me.Timer2.Interval = 10000
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -327,4 +332,5 @@ Partial Class frmPrincipal
     Friend WithEvents BGW As System.ComponentModel.BackgroundWorker
     Friend WithEvents BGW1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 End Class

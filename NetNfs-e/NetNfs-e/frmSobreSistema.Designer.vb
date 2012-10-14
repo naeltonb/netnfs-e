@@ -87,7 +87,7 @@ Partial Class frmSobreSistema
         Me.LinkLabel1.ForeColor = System.Drawing.Color.Blue
         Me.LinkLabel1.Location = New System.Drawing.Point(60, 79)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(183, 16)
+        Me.LinkLabel1.Size = New System.Drawing.Size(180, 16)
         Me.LinkLabel1.TabIndex = 14
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "www.netsystemas.com.br"
@@ -98,7 +98,7 @@ Partial Class frmSobreSistema
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(19, 139)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 16)
+        Me.Label7.Size = New System.Drawing.Size(74, 16)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Empresa:"
         '
@@ -108,7 +108,7 @@ Partial Class frmSobreSistema
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(19, 155)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 16)
+        Me.Label8.Size = New System.Drawing.Size(78, 16)
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "Copyright:"
         '
@@ -118,7 +118,7 @@ Partial Class frmSobreSistema
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(19, 123)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 16)
+        Me.Label9.Size = New System.Drawing.Size(62, 16)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Versão:"
         '
@@ -128,7 +128,7 @@ Partial Class frmSobreSistema
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(19, 107)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(55, 16)
+        Me.Label10.Size = New System.Drawing.Size(53, 16)
         Me.Label10.TabIndex = 10
         Me.Label10.Text = "Nome:"
         '
@@ -138,7 +138,7 @@ Partial Class frmSobreSistema
         Me.LabelCompanyName.ForeColor = System.Drawing.Color.Black
         Me.LabelCompanyName.Location = New System.Drawing.Point(90, 139)
         Me.LabelCompanyName.Name = "LabelCompanyName"
-        Me.LabelCompanyName.Size = New System.Drawing.Size(131, 16)
+        Me.LabelCompanyName.Size = New System.Drawing.Size(128, 16)
         Me.LabelCompanyName.TabIndex = 9
         Me.LabelCompanyName.Text = "Nome do produto"
         '
@@ -148,7 +148,7 @@ Partial Class frmSobreSistema
         Me.LabelCopyright.ForeColor = System.Drawing.Color.Black
         Me.LabelCopyright.Location = New System.Drawing.Point(98, 155)
         Me.LabelCopyright.Name = "LabelCopyright"
-        Me.LabelCopyright.Size = New System.Drawing.Size(131, 16)
+        Me.LabelCopyright.Size = New System.Drawing.Size(128, 16)
         Me.LabelCopyright.TabIndex = 8
         Me.LabelCopyright.Text = "Nome do produto"
         '
@@ -158,7 +158,7 @@ Partial Class frmSobreSistema
         Me.LabelVersion.ForeColor = System.Drawing.Color.Black
         Me.LabelVersion.Location = New System.Drawing.Point(78, 123)
         Me.LabelVersion.Name = "LabelVersion"
-        Me.LabelVersion.Size = New System.Drawing.Size(131, 16)
+        Me.LabelVersion.Size = New System.Drawing.Size(128, 16)
         Me.LabelVersion.TabIndex = 7
         Me.LabelVersion.Text = "Nome do produto"
         '
@@ -168,7 +168,7 @@ Partial Class frmSobreSistema
         Me.LabelProductName.ForeColor = System.Drawing.Color.Black
         Me.LabelProductName.Location = New System.Drawing.Point(69, 107)
         Me.LabelProductName.Name = "LabelProductName"
-        Me.LabelProductName.Size = New System.Drawing.Size(131, 16)
+        Me.LabelProductName.Size = New System.Drawing.Size(128, 16)
         Me.LabelProductName.TabIndex = 6
         Me.LabelProductName.Text = "Nome do produto"
         '
@@ -190,7 +190,7 @@ Partial Class frmSobreSistema
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(21, 79)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 16)
+        Me.Label4.Size = New System.Drawing.Size(39, 16)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Site:"
         '
@@ -200,7 +200,7 @@ Partial Class frmSobreSistema
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(21, 63)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(307, 16)
+        Me.Label3.Size = New System.Drawing.Size(300, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "E-mail: netsystemas@netsystemas.com.br"
         '
@@ -210,9 +210,9 @@ Partial Class frmSobreSistema
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(19, 47)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(372, 16)
+        Me.Label2.Size = New System.Drawing.Size(348, 16)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Telefone: (31)9814-4282 - Mateus Luis de Oliveira"
+        Me.Label2.Text = "Telefone: (31)9487-7351 - Mateus Luis de Oliveira"
         '
         'Label1
         '
@@ -220,7 +220,7 @@ Partial Class frmSobreSistema
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(19, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(390, 16)
+        Me.Label1.Size = New System.Drawing.Size(366, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Telefone: (31)9758-6469 - Josimar Cordeiro da Silva"
         '
