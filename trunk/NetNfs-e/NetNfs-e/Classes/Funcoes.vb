@@ -137,7 +137,7 @@ Public Module Funcoes
     End Sub
 
     '// Deleta arquivos de um determinado diretório
-    Friend Sub DeletarArquivos(ByVal Diretorio As String)
+    Public Sub DeletarArquivos(ByVal Diretorio As String)
         'Apaga os arquivos da pasta Temp
         Dim _diretorio As New DirectoryInfo(Diretorio)
         Dim arquivos() As FileInfo = _diretorio.GetFiles
