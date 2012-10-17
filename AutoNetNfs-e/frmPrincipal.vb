@@ -30,6 +30,10 @@ Public Class frmPrincipal
     Private Sub BGW1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BGW1.DoWork
 
         Timer2.Enabled = False
+
+        'Deleta os arquivos da pasta temporária
+        DeletarArquivos(My.Application.Info.DirectoryPath & "\Temp")
+
         frmGerenciar = New frmGerenciarLotes(True)
         frmGerenciar.ShowInTaskbar = False
         frmGerenciar.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -100,22 +104,21 @@ Public Class frmPrincipal
 
     Private Sub frmPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-
         'Carrega os parâmetros do sistema NetNfs-e
         CarregarParametrosSistema()
 
         'Carrega os parâmetros automáticos
         CarregarParametrosAutomaticos()
 
+        'Carrega uma instância do formulário frmGerenciarLotes para visualização/acompanhamento do usuário
         frmGerenciarLote = New frmGerenciarLotes(True)
         frmGerenciarLote.MdiParent = Me
         frmGerenciarLote.Show()
+        Me.Hide()
 
+        'Inicia a execução em segundo plano (nova thead)
         BGW.RunWorkerAsync()
         BGW1.RunWorkerAsync()
-
-        'Habilita o Timer e da início ao processo
-        'Timer1.Enabled=True
 
     End Sub
 
@@ -278,4 +281,9 @@ Public Class frmPrincipal
         frmGerenciarLote.CarregarLista()
     End Sub
 
+    Private Sub MnuSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MnuSair.Click
+        If MsgBox("Tem certeza que deseja sair do sistema?", vbQuestion + vbYesNo + vbDefaultButton2, "Confirmação") = vbYes Then
+            End
+        End If
+    End Sub
 End Class
